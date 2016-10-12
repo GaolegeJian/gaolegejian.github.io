@@ -98,7 +98,7 @@
     <link href="http://yoursite.com/2016/10/10/UIImageView%E8%AF%A6%E8%A7%A3%E5%92%8CAVplayer%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"/>
     <id>http://yoursite.com/2016/10/10/UIImageView详解和AVplayer简单使用/</id>
     <published>2016-10-10T01:13:00.000Z</published>
-    <updated>2016-10-12T04:00:38.000Z</updated>
+    <updated>2016-10-12T04:04:24.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="contentMode属性"><a href="#contentMode属性" class="headerlink" title="contentMode属性"></a>contentMode属性</h2><ul>
 <li><p>带有scale单词的：图片有可能会拉伸</p>
@@ -163,7 +163,7 @@
 <li><p>抽取重复代码</p>
 <ul>
 <li>将相同代码放到一个新的方法中</li>
-<li>不同的东西就变成方法的参数</li>
+<li>不同的代码就变成方法的参数</li>
 </ul>
 </li>
 <li><p>图片的加载方式</p>
