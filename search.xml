@@ -1,28 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>GaoJian&#39;s blog</title>
+<search>
   
-  <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2016-10-12T02:01:37.000Z</updated>
-  <id>http://yoursite.com/</id>
-  
-  <author>
-    <name>Gao Jian</name>
     
-  </author>
-  
-  <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>UI常用控件概述</title>
-    <link href="http://yoursite.com/2016/10/11/UI%E6%8E%A7%E4%BB%B6%E5%B8%B8%E7%94%A8%E6%A6%82%E8%BF%B0/"/>
-    <id>http://yoursite.com/2016/10/11/UI控件常用概述/</id>
-    <published>2016-10-11T13:22:09.000Z</published>
-    <updated>2016-10-12T02:01:37.000Z</updated>
-    
-    <content type="html"><![CDATA[<ul>
+    <entry>
+      <title><![CDATA[UI常用控件概述]]></title>
+      <url>http://yoursite.com/2016/10/11/UI%E6%8E%A7%E4%BB%B6%E5%B8%B8%E7%94%A8%E6%A6%82%E8%BF%B0/</url>
+      <content type="html"><![CDATA[<ul>
 <li>UINavigationBar – 导航条 </li>
 <li>UIDatePicker – 日期选择器</li>
 <li>UIToolbar – 工具条</li>
@@ -65,33 +49,12 @@ imageWithContentOfFile
 </code></pre></li>
 </ul>
 ]]></content>
+    </entry>
     
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;UINavigationBar – 导航条 &lt;/li&gt;
-&lt;li&gt;UIDatePicker – 日期选择器&lt;/li&gt;
-&lt;li&gt;UIToolbar – 工具条&lt;/li&gt;
-&lt;li&gt;UIPickerView – 选择器&lt;/li&gt;
-&lt;li&gt;UISegmentControl
-    
-    </summary>
-    
-      <category term="iOS学习笔记" scheme="http://yoursite.com/categories/iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="UI控件" scheme="http://yoursite.com/tags/UI%E6%8E%A7%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>UIImageView详解和AVplayer简单使用</title>
-    <link href="http://yoursite.com/2016/10/10/UIImageView%E8%AF%A6%E8%A7%A3%E5%92%8CAVplayer%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2016/10/10/UIImageView详解和AVplayer简单使用/</id>
-    <published>2016-10-10T01:13:00.000Z</published>
-    <updated>2016-10-12T01:58:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="contentMode属性"><a href="#contentMode属性" class="headerlink" title="contentMode属性"></a>contentMode属性</h2><ul>
+    <entry>
+      <title><![CDATA[UIImageView详解和AVplayer简单使用]]></title>
+      <url>http://yoursite.com/2016/10/10/UIImageView%E8%AF%A6%E8%A7%A3%E5%92%8CAVplayer%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</url>
+      <content type="html"><![CDATA[<h2 id="contentMode属性"><a href="#contentMode属性" class="headerlink" title="contentMode属性"></a>contentMode属性</h2><ul>
 <li><p>带有scale单词的：图片有可能会拉伸</p>
 <ul>
 <li>UIViewContentModeScaleToFill<ul>
@@ -184,35 +147,12 @@ imageWithContentOfFile
 <li>音频文件的简单播放</li>
 </ul>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 创建一个音频文件的URL(URL就是文件路径对象)</span></div><div class="line"><span class="built_in">NSURL</span> *url = [[<span class="built_in">NSBundle</span> mainBundle] URLForResource:<span class="string">@"音频文件名"</span> withExtension:<span class="string">@"音频文件的扩展名"</span>];</div><div class="line"><span class="comment">// 创建播放器</span></div><div class="line"><span class="keyword">self</span>.player = [<span class="built_in">AVPlayer</span> playerWithURL:url];</div><div class="line"><span class="comment">// 播放</span></div><div class="line">[<span class="keyword">self</span>.player play];</div></pre></td></tr></table></figure>]]></content>
+    </entry>
     
-    <summary type="html">
-    
-      &lt;h2 id=&quot;contentMode属性&quot;&gt;&lt;a href=&quot;#contentMode属性&quot; class=&quot;headerlink&quot; title=&quot;contentMode属性&quot;&gt;&lt;/a&gt;contentMode属性&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;带有scale单词的：图片有可能会
-    
-    </summary>
-    
-      <category term="iOS学习笔记" scheme="http://yoursite.com/categories/iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="UIImageView" scheme="http://yoursite.com/categories/iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/UIImageView/"/>
-    
-      <category term="AVplayer" scheme="http://yoursite.com/categories/iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/UIImageView/AVplayer/"/>
-    
-    
-      <category term="UIImageView" scheme="http://yoursite.com/tags/UIImageView/"/>
-    
-      <category term="AVplayer" scheme="http://yoursite.com/tags/AVplayer/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>storyboard文件的认识和UIView控件</title>
-    <link href="http://yoursite.com/2016/10/10/storyboard%E6%96%87%E4%BB%B6%E7%9A%84%E8%AE%A4%E8%AF%86%E5%92%8CUIView%E6%8E%A7%E4%BB%B6/"/>
-    <id>http://yoursite.com/2016/10/10/storyboard文件的认识和UIView控件/</id>
-    <published>2016-10-10T00:00:00.000Z</published>
-    <updated>2016-10-11T13:14:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="storyboard文件的认识"><a href="#storyboard文件的认识" class="headerlink" title="storyboard文件的认识"></a>storyboard文件的认识</h3><ul>
+    <entry>
+      <title><![CDATA[storyboard文件的认识和UIView控件]]></title>
+      <url>http://yoursite.com/2016/10/10/storyboard%E6%96%87%E4%BB%B6%E7%9A%84%E8%AE%A4%E8%AF%86%E5%92%8CUIView%E6%8E%A7%E4%BB%B6/</url>
+      <content type="html"><![CDATA[<h3 id="storyboard文件的认识"><a href="#storyboard文件的认识" class="headerlink" title="storyboard文件的认识"></a>storyboard文件的认识</h3><ul>
 <li>作用：描述软件界面</li>
 <li>程序启动的简单过程<ul>
 <li>程序一启动，就会加载main.storyboard文件</li>
@@ -341,50 +281,15 @@ imageWithContentOfFile
 <li>在UIKit中，坐标系的原点(0，0)在左上角，x值向右正向延伸，y值向下正向延伸</li>
 </ul>
 ]]></content>
+    </entry>
     
-    <summary type="html">
-    
-      &lt;h3 id=&quot;storyboard文件的认识&quot;&gt;&lt;a href=&quot;#storyboard文件的认识&quot; class=&quot;headerlink&quot; title=&quot;storyboard文件的认识&quot;&gt;&lt;/a&gt;storyboard文件的认识&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;作用：描述软件界面&lt;/l
-    
-    </summary>
-    
-      <category term="iOS学习笔记" scheme="http://yoursite.com/categories/iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="storyboard" scheme="http://yoursite.com/categories/iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/storyboard/"/>
-    
-      <category term="UIView" scheme="http://yoursite.com/categories/iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/storyboard/UIView/"/>
-    
-    
-      <category term="storyboard" scheme="http://yoursite.com/tags/storyboard/"/>
-    
-      <category term="UIView" scheme="http://yoursite.com/tags/UIView/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>搭建Hexo博客</title>
-    <link href="http://yoursite.com/2016/10/08/%E6%90%AD%E5%BB%BAHexo/"/>
-    <id>http://yoursite.com/2016/10/08/搭建Hexo/</id>
-    <published>2016-10-08T03:44:56.000Z</published>
-    <updated>2016-10-09T02:29:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>搭建博客教程:</strong> <a href="http://www.ac4fun.com/" title="http://www.ac4fun.com" target="_blank" rel="external">http://www.ac4fun.com</a><br><strong>常用命令:</strong><br>    hexo clean    : 清除public文件夹，重新部署之前的步骤<br>    hexo generate : 修改配置或者提交新文章后都需要重新部署，主要是声明public文件夹里面的内容<br>    hexo deploy   : 将更新后的的博客上传至你的github空间</p>
+    <entry>
+      <title><![CDATA[搭建Hexo博客]]></title>
+      <url>http://yoursite.com/2016/10/08/%E6%90%AD%E5%BB%BAHexo/</url>
+      <content type="html"><![CDATA[<p><strong>搭建博客教程:</strong> <a href="http://www.ac4fun.com/" title="http://www.ac4fun.com" target="_blank" rel="external">http://www.ac4fun.com</a><br><strong>常用命令:</strong><br>    hexo clean    : 清除public文件夹，重新部署之前的步骤<br>    hexo generate : 修改配置或者提交新文章后都需要重新部署，主要是声明public文件夹里面的内容<br>    hexo deploy   : 将更新后的的博客上传至你的github空间</p>
 ]]></content>
+    </entry>
     
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;搭建博客教程:&lt;/strong&gt; &lt;a href=&quot;http://www.ac4fun.com/&quot; title=&quot;http://www.ac4fun.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.ac4fun.
-    
-    </summary>
-    
-      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
-    
-      <category term="Node.js" scheme="http://yoursite.com/categories/Hexo/Node-js/"/>
-    
-    
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
-    
-  </entry>
   
-</feed>
+  
+</search>

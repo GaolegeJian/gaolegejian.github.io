@@ -227,9 +227,33 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input" placeholder="search my blog...">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -284,6 +308,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -315,59 +358,25 @@
       
         
           
-            <ul>
-<li>UINavigationBar – 导航条</li>
-<li>UIDatePicker – 日期选择器</li>
-<li>UIToolbar – 工具条</li>
-<li>UIPickerView – 选择器</li>
-<li>UISegmentControl – 选项卡</li>
-<li>UISwitch – 开关</li>
-<li>UIWebView – 网页显示控件</li>
-<li>UICollectionView – 九宫格</li>
-<li>UITableView – 表格</li>
-<li>UIPageControl – 分页控件</li>
-<li>UIScrollView – 滚动的控件</li>
-<li>UIActionSheet – 底部弹框</li>
-<li>UIAlertView – 对话框（中间弹框</li>
-<li>UIActivityIndicator – 圈圈</li>
-<li>UISlider – 滑块</li>
-<li>UIProgressView – 进度条</li>
-<li>UITextView – 能滚动的文字显示控件</li>
-<li>UITextField – 文本输入框</li>
-<li>UIButton – 按钮</li>
-<li>UILabel用于显示文本</li>
-</ul>
-<h3 id="UILabel"><a href="#UILabel" class="headerlink" title="UILabel"></a>UILabel</h3><h5 id="什么是UILabal"><a href="#什么是UILabal" class="headerlink" title="什么是UILabal"></a>什么是UILabal</h5><ul>
-<li>UILabel极其常用，功能比较专一：显示文字</li>
-</ul>
-<h5 id="UILabel的常见属性"><a href="#UILabel的常见属性" class="headerlink" title="UILabel的常见属性"></a>UILabel的常见属性</h5><pre><code><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,<span class="keyword">copy</span>)   <span class="built_in">NSString</span> *text;   <span class="comment">//显示的文字</span></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,<span class="keyword">retain</span>) <span class="built_in">UIFont</span> *font;    <span class="comment">//字体</span></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,<span class="keyword">retain</span>) <span class="built_in">UIColor</span> *textColor;  <span class="comment">//文字颜色</span></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>) <span class="built_in">NSTextAlignment</span>    textAlignment;  <span class="comment">//对齐模式（比如左对齐、居中对齐、右对齐） </span></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>) <span class="built_in">NSInteger</span> numberOfLines;  <span class="comment">//文字行数</span></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>)        <span class="built_in">NSLineBreakMode</span>    lineBreakMode;  <span class="comment">//换行模式</span></div></pre></td></tr></table></figure>
-</code></pre><h3 id="UIFont"><a href="#UIFont" class="headerlink" title="UIFont"></a>UIFont</h3><ul>
-<li>UIFont代表字体</li>
-</ul>
-<h5 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h5><pre><code><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">+ (<span class="built_in">UIFont</span> *)systemFontOfSize:(<span class="built_in">CGFloat</span>)fontSize;   <span class="comment">//系统默认字体</span></div><div class="line">+ (<span class="built_in">UIFont</span> *)boldSystemFontOfSize:(<span class="built_in">CGFloat</span>)fontSize;  <span class="comment">//粗体</span></div><div class="line">+ (<span class="built_in">UIFont</span> *)italicSystemFontOfSize:(<span class="built_in">CGFloat</span>)fontSize;  <span class="comment">//斜体</span></div></pre></td></tr></table></figure>
-</code></pre><h3 id="UIImageView"><a href="#UIImageView" class="headerlink" title="UIImageView"></a>UIImageView</h3><h5 id="什么是UIImageView"><a href="#什么是UIImageView" class="headerlink" title="什么是UIImageView"></a>什么是UIImageView</h5><ul>
-<li>UIImageView极其常用，功能比较专一：显示图片</li>
-</ul>
-<h5 id="UIImageView常见的属性"><a href="#UIImageView常见的属性" class="headerlink" title="UIImageView常见的属性"></a>UIImageView常见的属性</h5><pre><code><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,<span class="keyword">retain</span>) <span class="built_in">UIImage</span> *image;   <span class="comment">//显示的图片</span></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,<span class="keyword">copy</span>) <span class="built_in">NSArray</span> *animationImages;  <span class="comment">//显示的动画图片</span></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>) <span class="built_in">NSTimeInterval</span> animationDuration;  <span class="comment">//动画图片的持续时间</span></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>) <span class="built_in">NSInteger</span>      animationRepeatCount;  <span class="comment">//动画的播放次数（默认是0，代表无限播放）</span></div></pre></td></tr></table></figure>
-</code></pre><h5 id="UIImageView常见的方法"><a href="#UIImageView常见的方法" class="headerlink" title="UIImageView常见的方法"></a>UIImageView常见的方法</h5><pre><code><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)startAnimating;   <span class="comment">// 开始动画</span></div><div class="line">- (<span class="keyword">void</span>)stopAnimating;  <span class="comment">// 停止动画</span></div><div class="line">- (<span class="built_in">BOOL</span>)isAnimating;  <span class="comment">// 是否正在执行动画</span></div></pre></td></tr></table></figure>
-</code></pre><h5 id="UIImage"><a href="#UIImage" class="headerlink" title="UIImage"></a>UIImage</h5><ul>
-<li>一个UIImage对象代表一张图片对象</li>
-<li>创建方法  <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">imageName:</div><div class="line">imageWithContentOfFile</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="UIButton"><a href="#UIButton" class="headerlink" title="UIButton"></a>UIButton</h3><h5 id="UIButton的作用"><a href="#UIButton的作用" class="headerlink" title="UIButton的作用"></a>UIButton的作用</h5><ul>
-<li>可以和用户交互</li>
-<li>既能显示图片,也能显示文字</li>
-</ul>
-<h5 id="UIButton的状态"><a href="#UIButton的状态" class="headerlink" title="UIButton的状态"></a>UIButton的状态</h5><ul>
-<li>normal（普通状态）<br>  默认情况（Default）<br>   对应的枚举常量：UIControlStateNormal </li>
-<li>highlighted（高亮状态）<br>   按钮被按下去的时候（手指还未松开）<br>   对应的枚举常量：UIControlStateHighlighted</li>
-<li>disabled（失效状态，不可用状态）<br>   如果enabled属性为NO，就是处于disable状态，代表按钮不可以被点击<br>   对应的枚举常量：UIControlStateDisabled</li>
-</ul>
-<h5 id="UIButton的常见方法"><a href="#UIButton的常见方法" class="headerlink" title="UIButton的常见方法"></a>UIButton的常见方法</h5><pre><code><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)setTitle:(<span class="built_in">NSString</span> *)title forState:(<span class="built_in">UIControlState</span>)state;  <span class="comment">//设置按钮的文字</span></div><div class="line">- (<span class="keyword">void</span>)setTitleColor:(<span class="built_in">UIColor</span> *)color forState:(<span class="built_in">UIControlState</span>)state;  <span class="comment">//设置按钮的文字颜色</span></div><div class="line">- (<span class="keyword">void</span>)setImage:(<span class="built_in">UIImage</span> *)image forState:(<span class="built_in">UIControlState</span>)state;   <span class="comment">//设置按钮内部的小图片</span></div><div class="line">- (<span class="keyword">void</span>)setBackgroundImage:(<span class="built_in">UIImage</span> *)image forState:(<span class="built_in">UIControlState</span>)state;  <span class="comment">//设置按钮的背景图片</span></div></pre></td></tr></table></figure>
-</code></pre><p>\&lt;!–more–></p>
-
           
+UINavigationBar – 导航条 
+UIDatePicker – 日期选择器
+UIToolbar – 工具条
+UIPickerView – 选择器
+UISegmentControl – 选项卡
+UISwitch – 开关
+UIWebView – 网页显示控件
+UICollectionView – 九宫格
+UITableView – 表格
+UIPageControl – 分页控件
+UIS
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/11/UI控件常用概述/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -509,101 +518,27 @@
       
         
           
-            <h2 id="contentMode属性"><a href="#contentMode属性" class="headerlink" title="contentMode属性"></a>contentMode属性</h2><ul>
-<li><p>带有scale单词的：图片有可能会拉伸</p>
-<ul>
-<li>UIViewContentModeScaleToFill<ul>
-<li>将图片拉伸至填充整个imageView</li>
-<li>图片显示的尺寸跟imageView的尺寸是一样的</li>
-</ul>
-</li>
-<li>带有aspect单词的：保持图片原来的宽高比<ul>
-<li>UIViewContentModeScaleAspectFit<ul>
-<li>保证刚好能看到图片的全部</li>
-</ul>
-</li>
-<li>UIViewContentModeScaleAspectFill<ul>
-<li>拉伸至图片的宽度或者高度跟imageView一样</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>没有scale单词的：图片绝对不会被拉伸，保持图片的原尺寸</p>
-<ul>
-<li>UIViewContentModeCenter</li>
-<li>UIViewContentModeTop</li>
-<li>UIViewContentModeBottom</li>
-<li>UIViewContentModeLeft</li>
-<li>UIViewContentModeRight</li>
-<li>UIViewContentModeTopLeft</li>
-<li>UIViewContentModeTopRight</li>
-<li>UIViewContentModeBottomLeft</li>
-<li>UIViewContentModeBottomRight</li>
-</ul>
-</li>
-</ul>
-<h2 id="小语法点"><a href="#小语法点" class="headerlink" title="小语法点"></a>小语法点</h2><ul>
-<li>不能直接修改：OC对象的结构体属性的成员</li>
-<li>下面的写法是错误的</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">imageView.frame.size = imageView.image.size;</div></pre></td></tr></table></figure>
-<ul>
-<li>正确写法</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">CGRect</span> tempFrame = imageView.frame;</div><div class="line">tempFrame.size = imageView.image.size;</div><div class="line">imageView.frame = tempFrame;</div></pre></td></tr></table></figure>
-<h2 id="initWithImage-方法"><a href="#initWithImage-方法" class="headerlink" title="initWithImage:方法"></a>initWithImage:方法</h2><ul>
-<li>利用这个方法创建出来的imageView的尺寸和传入的图片尺寸一样</li>
-</ul>
-<h2 id="修改frame的3种方式"><a href="#修改frame的3种方式" class="headerlink" title="修改frame的3种方式"></a>修改frame的3种方式</h2><ul>
-<li>直接使用CGRectMake函数</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">imageView.frame = <span class="built_in">CGRectMake</span>(<span class="number">100</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">200</span>);</div></pre></td></tr></table></figure>
-<ul>
-<li>利用临时结构体变量</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">CGRect</span> tempFrame = imageView.frame;</div><div class="line">tempFrame.origin.x = <span class="number">100</span>;</div><div class="line">tempFrame.origin.y = <span class="number">100</span>;</div><div class="line">tempFrame.size.width = <span class="number">200</span>;</div><div class="line">tempFrame.size.height = <span class="number">200</span>;</div><div class="line">imageView.frame = tempFrame;</div></pre></td></tr></table></figure>
-<ul>
-<li>使用大括号{}形式</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">imageView.frame = (<span class="built_in">CGRect</span>)&#123;&#123;<span class="number">100</span>, <span class="number">100</span>&#125;, &#123;<span class="number">200</span>, <span class="number">200</span>&#125;&#125;;</div></pre></td></tr></table></figure>
-<ul>
-<li><p>抽取重复代码</p>
-<ul>
-<li>将相同代码放到一个新的方法中</li>
-<li>不用的东西就变成方法的参数</li>
-</ul>
-</li>
-<li><p>图片的加载方式</p>
-<ul>
-<li><p>有缓存</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageNamed:<span class="string">@"图片名"</span>];</div></pre></td></tr></table></figure>
-<ul>
-<li>使用场合：图片比较小、使用频率较高</li>
-<li>建议把需要缓存的图片直接放到Images.xcassets</li>
-</ul>
-</li>
-<li><p>无缓存</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *file = [[<span class="built_in">NSBundle</span> mainBundle] pathForResource:<span class="string">@"图片名"</span> ofType:<span class="string">@"图片的扩展名"</span>];</div><div class="line"><span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageWithContentsOfFile:<span class="string">@"图片文件的全路径"</span>];</div></pre></td></tr></table></figure>
-<ul>
-<li>使用场合：图片比较大、使用频率较小</li>
-<li>不需要缓存的图片不能放在Images.xcassets</li>
-</ul>
-</li>
-<li>放在Images.xcassets里面的图片，只能通过图片名去加载图片</li>
-</ul>
-</li>
-<li><p>延迟做一些事情</p>
-</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[abc performSelector:<span class="keyword">@selector</span>(stand:) withObject:<span class="string">@"123"</span> afterDelay:<span class="number">10</span>];</div><div class="line"><span class="comment">// 10s后自动调用abc的stand:方法，并且传递@"123"参数</span></div></pre></td></tr></table></figure>
-<ul>
-<li>音频文件的简单播放</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 创建一个音频文件的URL(URL就是文件路径对象)</span></div><div class="line"><span class="built_in">NSURL</span> *url = [[<span class="built_in">NSBundle</span> mainBundle] URLForResource:<span class="string">@"音频文件名"</span> withExtension:<span class="string">@"音频文件的扩展名"</span>];</div><div class="line"><span class="comment">// 创建播放器</span></div><div class="line"><span class="keyword">self</span>.player = [<span class="built_in">AVPlayer</span> playerWithURL:url];</div><div class="line"><span class="comment">// 播放</span></div><div class="line">[<span class="keyword">self</span>.player play];</div></pre></td></tr></table></figure>
+          contentMode属性
+带有scale单词的：图片有可能会拉伸
 
-          
+UIViewContentModeScaleToFill
+将图片拉伸至填充整个imageView
+图片显示的尺寸跟imageView的尺寸是一样的
+
+
+带有aspect单词的：保持图片原来的宽高比
+UIViewContentModeScaleAspectFit
+保证刚好能看到图片的全部
+
+
+UIViewContentModeSc
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/10/UIImageView详解和AVplayer简单使用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -745,136 +680,26 @@
       
         
           
-            <h3 id="storyboard文件的认识"><a href="#storyboard文件的认识" class="headerlink" title="storyboard文件的认识"></a>storyboard文件的认识</h3><ul>
-<li>作用：描述软件界面</li>
-<li>程序启动的简单过程<ul>
-<li>程序一启动，就会加载main.storyboard文件</li>
-<li>会创建箭头所指向的控制器，并且显示控制器所管理的软件界面</li>
-</ul>
-</li>
-<li>配置程序一启动就会加载storyboard文件<br><img src="/image/%E7%A8%8B%E5%BA%8F%E5%85%A5%E5%8F%A3%E8%AE%BE%E7%BD%AE%E5%8A%A0%E8%BD%BDstoryboard.png" alt=""></li>
-</ul>
-<h4 id="控制器"><a href="#控制器" class="headerlink" title="控制器"></a>控制器</h4><ul>
-<li>概念: 凡是继承自UIViewController的对象，都叫做控制器</li>
-<li>注意: 每一个控制器都会专门管理一个软件界面</li>
-<li>作用: 负责处理软件界面的各种事件，负责软件界面的创建和销毁</li>
-</ul>
-<h4 id="IBAction"><a href="#IBAction" class="headerlink" title="IBAction"></a>IBAction</h4><ul>
-<li>只能修饰方法的返回值类型</li>
-<li>被IBAction修饰的方法<ul>
-<li>能拖线到storyboard中</li>
-<li>返回值类型实际是void</li>
-</ul>
-</li>
-<li>使用格式</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">`- (<span class="keyword">IBAction</span>)buttonClick</div><div class="line">&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>`</p>
-<h4 id="IBOutlet"><a href="#IBOutlet" class="headerlink" title="IBOutlet"></a>IBOutlet</h4><ul>
-<li>只能修饰属性</li>
-<li>被IBOutlet修饰的属性</li>
-<li>能拖线到storyboard中</li>
-<li>使用格式<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">`<span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">weak</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UILabel</span> *label;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>`</p>
-<h4 id="关于IBAction、IBOutlet前缀IB的解释"><a href="#关于IBAction、IBOutlet前缀IB的解释" class="headerlink" title="关于IBAction、IBOutlet前缀IB的解释"></a>关于IBAction、IBOutlet前缀IB的解释</h4><ul>
-<li>全称: Interfce Builder</li>
-<li>以前的UI界面开发模式: Xcode3 + Interfce Builder</li>
-<li>从Xcode4开始，Interfce Builder已经整合到Xcode中了</li>
-</ul>
-<h4 id="类扩展-Class-Extension"><a href="#类扩展-Class-Extension" class="headerlink" title="类扩展(Class Extension)"></a>类扩展(Class Extension)</h4><ul>
-<li>作用<ul>
-<li>能为某个类增加额外的属性、成员变量、方法声明</li>
-<li>一般将类扩展写到.m文件中</li>
-<li>一般将一些私有的属性写到类扩展</li>
-</ul>
-</li>
-<li>使用格式<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">`<span class="class"><span class="keyword">@interface</span> 类名()</span></div><div class="line"><span class="comment">/* 属性、成员变量、方法声明 */</span></div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>`- 与分类的区别</p>
-<ul>
-<li>分类的小括号必须有名字<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">`<span class="class"><span class="keyword">@interface</span> 类名(分类名字)</span></div><div class="line"><span class="comment">/* 方法声明 */</span></div><div class="line"><span class="keyword">@end</span></div><div class="line"><span class="class"><span class="keyword">@implementation</span> 类名(分类名字)</span></div><div class="line"><span class="comment">/* 方法实现 */</span></div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>`  - 分类只能扩充类方法</p>
-<ul>
-<li>如果在分类中声明了一个属性，分类只会生成这个属性的get/set方法声明</li>
-</ul>
-<h4 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h4><ul>
-<li><p>第1个错误</p>
-<ul>
-<li>错误描述:<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">`[\&lt;ViewController <span class="number">0x7fdc0152d300</span>\&gt; setValue:forUndefinedKey:](): <span class="keyword">this</span> <span class="keyword">class</span> is not key value coding-compliant <span class="keyword">for</span> the key label.</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<p>`  - 原因：IBOutlet属性代码被删掉了，但是属性连线还在</p>
-<ul>
-<li>解决：将残留的连线删掉</li>
-</ul>
-<ul>
-<li><p>第2个错误</p>
-<ul>
-<li>错误描述：<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">`-[ViewController blueClick](): unrecognized selector sent to instance <span class="number">0x7ff59d014320</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<p>`  - 原因：调用了一个不存在的方法</p>
-<ul>
-<li>解决：认真检查方法名，使用正确并且存在的方法名</li>
-</ul>
-<h4 id="项目的常见属性"><a href="#项目的常见属性" class="headerlink" title="项目的常见属性"></a>项目的常见属性</h4><ul>
-<li>Product Name<ul>
-<li>产品名称</li>
-<li>项目名称</li>
-<li>软件名称</li>
-</ul>
-</li>
-<li>Organization Name<ul>
-<li>公司名称</li>
-</ul>
-</li>
-<li>Organization Identifier<ul>
-<li>公司的唯一标识</li>
-<li>一般用网站域名的反写形式</li>
-</ul>
-</li>
-<li>Bundle Identifier<ul>
-<li>软件的唯一标识</li>
-<li>默认 == Organization Identifier + ProductName</li>
-</ul>
-</li>
-</ul>
-<h4 id="第一个iOS程序-改变文字的属性"><a href="#第一个iOS程序-改变文字的属性" class="headerlink" title="第一个iOS程序-改变文字的属性"></a>第一个iOS程序-改变文字的属性</h4><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">`- (<span class="keyword">IBAction</span>)clickButtonRed</div><div class="line">&#123;</div><div class="line"><span class="comment">// 改变文本颜色</span></div><div class="line"><span class="keyword">self</span>.label.textColor = [<span class="built_in">UIColor</span> redColor]();</div><div class="line"><span class="comment">// 改变背景颜色</span></div><div class="line"><span class="keyword">self</span>.label.backgroundColor = [<span class="built_in">UIColor</span> greenColor]();</div><div class="line"><span class="comment">// 文字居中</span></div><div class="line"><span class="keyword">self</span>.label.textAlignment = <span class="built_in">NSTextAlignmentCenter</span>;</div><div class="line"><span class="comment">// 改变文字内容</span></div><div class="line"><span class="keyword">self</span>.label.text = <span class="string">@"红色"</span>;</div><div class="line"><span class="comment">// 改变字体大小</span></div><div class="line"><span class="keyword">self</span>.label.font = [<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">20.</span>f]();</div><div class="line"><span class="keyword">self</span>.redbutton.backgroundColor = [<span class="built_in">UIColor</span> redColor]();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>`### 模拟器常见功能和快捷键</p>
-<ul>
-<li>commend + h 返回桌面</li>
-<li>commend + hh 删除程序</li>
-</ul>
-<h3 id="UIView"><a href="#UIView" class="headerlink" title="UIView"></a>UIView</h3><h4 id="父子控件"><a href="#父子控件" class="headerlink" title="父子控件"></a>父子控件</h4><ul>
-<li>01-每个控件都是一个容器，能容纳其他控件</li>
-<li>02-内部小控件是大控件的子控件</li>
-<li>03-大控件是内部小控件的父控件</li>
-<li>04-每一个控制器(UIViewController)内部都有一个默认的Uivew属性</li>
-</ul>
-<h4 id="UIView常见属性"><a href="#UIView常见属性" class="headerlink" title="UIView常见属性"></a>UIView常见属性</h4><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">`<span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,<span class="keyword">readonly</span>) <span class="built_in">UIView</span> *superview;</div><div class="line"> 获得自己的父控件对象</div></pre></td></tr></table></figure>
-<p>````objc<br>`@property(nonatomic,readonly,copy) NSArray *subviews;<br> 获得自己的所有子控件对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">````objc</div><div class="line">`@property(nonatomic) NSInteger tag;</div><div class="line"> 控件的ID(标识)，父控件可以通过tag来找到对应的子控件</div></pre></td></tr></table></figure></p>
-<p>````objc<br>`@property(nonatomic) CGAffineTransform transform;<br> 控件的形变属性(可以设置旋转角度、比例缩放、平移等属性)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">`</div><div class="line">### UIView常见方法</div><div class="line">```objc</div><div class="line">`- (void)addSubview:(UIView *)view;</div><div class="line"> 添加一个子控件view</div></pre></td></tr></table></figure></p>
-<p>`<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">`- (<span class="keyword">void</span>)removeFromSuperview;</div><div class="line"> 从父控件中移除</div></pre></td></tr></table></figure></p>
-<p>`<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">`- (<span class="built_in">UIView</span> *)viewWithTag:(<span class="built_in">NSInteger</span>)tag;</div><div class="line"> 根据一个tag标识找出对应的控件（一般都是子控件）</div></pre></td></tr></table></figure></p>
-<p>`</p>
-<h4 id="UIView位置和尺寸"><a href="#UIView位置和尺寸" class="headerlink" title="UIView位置和尺寸"></a>UIView位置和尺寸</h4><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">`<span class="keyword">@property</span>(<span class="keyword">nonatomic</span>) <span class="built_in">CGRect</span> frame;</div><div class="line"> 控件矩形框在父控件中的位置和尺寸(以父控件的左上角为坐标原点)</div></pre></td></tr></table></figure>
-<p>`<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">`<span class="keyword">@property</span>(<span class="keyword">nonatomic</span>) <span class="built_in">CGRect</span> bounds;</div><div class="line"> 控件矩形框的位置和尺寸(以自己左上角为坐标原点，所以bounds的x、y一般为<span class="number">0</span>)</div></pre></td></tr></table></figure></p>
-<p>`<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">`<span class="keyword">@property</span>(<span class="keyword">nonatomic</span>) <span class="built_in">CGPoint</span> center;</div><div class="line"> 控件中点的位置(以父控件的左上角为坐标原点)</div></pre></td></tr></table></figure></p>
-<p>`</p>
-<h4 id="UIKit坐标系"><a href="#UIKit坐标系" class="headerlink" title="UIKit坐标系"></a>UIKit坐标系</h4><ul>
-<li>在UIKit中，坐标系的原点(0，0)在左上角，x值向右正向延伸，y值向下正向延伸</li>
-</ul>
+          storyboard文件的认识
+作用：描述软件界面
+程序启动的简单过程
+程序一启动，就会加载main.storyboard文件
+会创建箭头所指向的控制器，并且显示控制器所管理的软件界面
 
-          
+
+配置程序一启动就会加载storyboard文件
+
+控制器
+概念: 凡是继承自UIViewController的对象，都叫做控制器
+注意: 每一个控制器都会专门管理一个软件界面
+作用: 负责处理软件界面的各种事件
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/10/storyboard文件的认识和UIView控件/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1004,9 +829,15 @@
       
         
           
-            <p><strong>搭建博客教程:</strong> <a href="http://www.ac4fun.com/" title="http://www.ac4fun.com" target="_blank" rel="external">http://www.ac4fun.com</a><br><strong>常用命令:</strong><br>    hexo clean    : 清除public文件夹，重新部署之前的步骤<br>    hexo generate : 修改配置或者提交新文章后都需要重新部署，主要是声明public文件夹里面的内容<br>    hexo deploy   : 将更新后的的博客上传至你的github空间</p>
+          搭建博客教程: http://www.ac4fun.com常用命令:    hexo clean    : 清除public文件夹，重新部署之前的步骤    hexo generate : 修改配置或者提交新文章后都需要重新部署，主要是声明public文件夹里面的内容    hexo deploy   : 将更新后的的博客上传至你的github空间
 
           
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/08/搭建Hexo/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1303,6 +1134,137 @@
 
   
   
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
   
 
   
