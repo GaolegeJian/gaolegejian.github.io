@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="UIView," />
 
 
 
@@ -86,16 +86,33 @@
 
 
 
-<meta name="description" content="stay hungry, stay foolish.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="note">
-<meta property="og:url" content="http://yoursite.com/note/index.html">
+<meta name="description" content="View的封装
+如果一个view内部的子控件比较多，一般会考虑自定义一个view，把它内部子控件的创建屏蔽起来，不让外界关心
+外界可以传入对应的模型数据给view，view拿到模型数据后给内部的子控件设置对应的数据
+封装控件的基本步骤
+在initWithFrame:方法中添加子控件，提供便利构造方法
+在layoutSubviews方法中设置子控件的frame（一定要调用super的layoutSu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="View的封装">
+<meta property="og:url" content="http://yoursite.com/2016/10/16/View的封装/index.html">
 <meta property="og:site_name" content="GaoJian's blog">
-<meta property="og:description" content="stay hungry, stay foolish.">
-<meta property="og:updated_time" content="2016-10-11T09:54:09.000Z">
+<meta property="og:description" content="View的封装
+如果一个view内部的子控件比较多，一般会考虑自定义一个view，把它内部子控件的创建屏蔽起来，不让外界关心
+外界可以传入对应的模型数据给view，view拿到模型数据后给内部的子控件设置对应的数据
+封装控件的基本步骤
+在initWithFrame:方法中添加子控件，提供便利构造方法
+在layoutSubviews方法中设置子控件的frame（一定要调用super的layoutSu">
+<meta property="og:image" content="http://yoursite.com/image/View%E7%9A%84%E5%B0%81%E8%A3%85/%E7%AE%80%E5%8D%95%E7%9A%84MVC.png">
+<meta property="og:updated_time" content="2016-10-16T10:11:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="note">
-<meta name="twitter:description" content="stay hungry, stay foolish.">
+<meta name="twitter:title" content="View的封装">
+<meta name="twitter:description" content="View的封装
+如果一个view内部的子控件比较多，一般会考虑自定义一个view，把它内部子控件的创建屏蔽起来，不让外界关心
+外界可以传入对应的模型数据给view，view拿到模型数据后给内部的子控件设置对应的数据
+封装控件的基本步骤
+在initWithFrame:方法中添加子控件，提供便利构造方法
+在layoutSubviews方法中设置子控件的frame（一定要调用super的layoutSu">
+<meta name="twitter:image" content="http://yoursite.com/image/View%E7%9A%84%E5%B0%81%E8%A3%85/%E7%AE%80%E5%8D%95%E7%9A%84MVC.png">
 
 
 
@@ -113,13 +130,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-    note | GaoJian's blog
-  
-</title>
+  <title> View的封装 | GaoJian's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -149,7 +160,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -273,9 +284,175 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                View的封装
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-16T18:07:42+08:00" content="2016-10-16">
+              2016-10-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/UIView/" itemprop="url" rel="index">
+                    <span itemprop="name">UIView</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/16/View的封装/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/16/View的封装/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-    
+      
+
+      
+        <h3 id="View的封装"><a href="#View的封装" class="headerlink" title="View的封装"></a>View的封装</h3><ul>
+<li>如果一个view内部的子控件比较多，一般会考虑自定义一个view，把它内部子控件的创建屏蔽起来，不让外界关心</li>
+<li>外界可以传入对应的模型数据给view，view拿到模型数据后给内部的子控件设置对应的数据</li>
+<li>封装控件的基本步骤<ul>
+<li>在initWithFrame:方法中添加子控件，提供便利构造方法</li>
+<li>在layoutSubviews方法中设置子控件的frame（一定要调用super的layoutSubviews）</li>
+<li>增加模型属性，在模型属性set方法中设置数据到子控件上</li>
+</ul>
+</li>
+</ul>
+<h3 id="简单的MVC"><a href="#简单的MVC" class="headerlink" title="简单的MVC"></a>简单的MVC</h3><p><img src="/image/View%E7%9A%84%E5%B0%81%E8%A3%85/%E7%AE%80%E5%8D%95%E7%9A%84MVC.png" alt=""></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>只是一个功能</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechat-qcode.jpg" alt="Gao Jian WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/UIView/" rel="tag">#UIView</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/16/plist文件和加载数据/" rel="next" title="plist文件和加载数据">
+                <i class="fa fa-chevron-left"></i> plist文件和加载数据
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -286,8 +463,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="note/index.html"
-           data-title="note" data-url="http://yoursite.com/note/index.html">
+      <div class="ds-thread" data-thread-key="2016/10/16/View的封装/"
+           data-title="View的封装" data-url="http://yoursite.com/2016/10/16/View的封装/">
       </div>
     
   </div>
@@ -311,8 +488,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -323,7 +509,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -331,7 +517,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -340,7 +526,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -403,6 +589,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#View的封装"><span class="nav-number">1.</span> <span class="nav-text">View的封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单的MVC"><span class="nav-number">2.</span> <span class="nav-text">简单的MVC</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -515,6 +712,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

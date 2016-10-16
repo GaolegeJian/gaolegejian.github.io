@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo," />
+  <meta name="keywords" content="plist,懒加载,模型," />
 
 
 
@@ -86,16 +86,27 @@
 
 
 
-<meta name="description" content="搭建博客教程: http://www.ac4fun.com常用命令:    hexo clean    : 清除public文件夹，重新部署之前的步骤    hexo generate : 修改配置或者提交新文章后都需要重新部署，主要是声明public文件夹里面的内容    hexo deploy   : 将更新后的的博客上传至你的github空间">
+<meta name="description" content="什么是plist文件将数据直接写在代码里面，不是一种合理的做法。如果数据经常改，就要经常翻开对应的代码进行修改，造成代码扩展性低；
+因此，可以考虑将经常变的数据放在文件中进行存储，程序启动后从文件中读取最新的数据。如果要变动数据，直接修改数据文件即可，不用修改代码；
+一般可以使用属性列表文件存储NSArray或者NSDictionary之类的数据，这种“属性列表文件”的扩展名是plist，因此也称">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搭建Hexo博客">
-<meta property="og:url" content="http://yoursite.com/2016/10/08/搭建Hexo/index.html">
+<meta property="og:title" content="plist文件和加载数据">
+<meta property="og:url" content="http://yoursite.com/2016/10/16/plist文件和加载数据/index.html">
 <meta property="og:site_name" content="GaoJian's blog">
-<meta property="og:description" content="搭建博客教程: http://www.ac4fun.com常用命令:    hexo clean    : 清除public文件夹，重新部署之前的步骤    hexo generate : 修改配置或者提交新文章后都需要重新部署，主要是声明public文件夹里面的内容    hexo deploy   : 将更新后的的博客上传至你的github空间">
-<meta property="og:updated_time" content="2016-10-09T02:29:05.000Z">
+<meta property="og:description" content="什么是plist文件将数据直接写在代码里面，不是一种合理的做法。如果数据经常改，就要经常翻开对应的代码进行修改，造成代码扩展性低；
+因此，可以考虑将经常变的数据放在文件中进行存储，程序启动后从文件中读取最新的数据。如果要变动数据，直接修改数据文件即可，不用修改代码；
+一般可以使用属性列表文件存储NSArray或者NSDictionary之类的数据，这种“属性列表文件”的扩展名是plist，因此也称">
+<meta property="og:image" content="http://yoursite.com/image/plist%E6%96%87%E4%BB%B6%E5%92%8C%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE/%E5%88%9B%E5%BB%BAplist%E6%96%87%E4%BB%B6.png">
+<meta property="og:image" content="http://yoursite.com/image/plist%E6%96%87%E4%BB%B6%E5%92%8C%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE/plist%E6%96%87%E4%BB%B6%E7%9A%84%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B.png">
+<meta property="og:image" content="http://yoursite.com/image/plist%E6%96%87%E4%BB%B6%E5%92%8C%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE/plist%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F.png">
+<meta property="og:image" content="http://yoursite.com/image/plist%E6%96%87%E4%BB%B6%E5%92%8C%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE/%E5%AD%97%E5%85%B8%E8%BD%AC%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BF%87%E7%A8%8B.png">
+<meta property="og:updated_time" content="2016-10-16T10:57:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搭建Hexo博客">
-<meta name="twitter:description" content="搭建博客教程: http://www.ac4fun.com常用命令:    hexo clean    : 清除public文件夹，重新部署之前的步骤    hexo generate : 修改配置或者提交新文章后都需要重新部署，主要是声明public文件夹里面的内容    hexo deploy   : 将更新后的的博客上传至你的github空间">
+<meta name="twitter:title" content="plist文件和加载数据">
+<meta name="twitter:description" content="什么是plist文件将数据直接写在代码里面，不是一种合理的做法。如果数据经常改，就要经常翻开对应的代码进行修改，造成代码扩展性低；
+因此，可以考虑将经常变的数据放在文件中进行存储，程序启动后从文件中读取最新的数据。如果要变动数据，直接修改数据文件即可，不用修改代码；
+一般可以使用属性列表文件存储NSArray或者NSDictionary之类的数据，这种“属性列表文件”的扩展名是plist，因此也称">
+<meta name="twitter:image" content="http://yoursite.com/image/plist%E6%96%87%E4%BB%B6%E5%92%8C%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE/%E5%88%9B%E5%BB%BAplist%E6%96%87%E4%BB%B6.png">
 
 
 
@@ -113,7 +124,7 @@
   };
 </script>
 
-  <title> 搭建Hexo博客 | GaoJian's blog </title>
+  <title> plist文件和加载数据 | GaoJian's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -286,7 +297,7 @@
             
             
               
-                搭建Hexo博客
+                plist文件和加载数据
               
             
           </h1>
@@ -298,50 +309,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-08T11:44:56+08:00" content="2016-10-08">
-              2016-10-08
+            <time itemprop="dateCreated" datetime="2016-10-16T17:26:47+08:00" content="2016-10-16">
+              2016-10-16
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Hexo/Node-js/" itemprop="url" rel="index">
-                    <span itemprop="name">Node.js</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/08/搭建Hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/08/搭建Hexo/" itemprop="commentsCount"></span>
+                <a href="/2016/10/16/plist文件和加载数据/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/16/plist文件和加载数据/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -369,7 +349,76 @@
       
 
       
-        <p><strong>搭建博客教程:</strong> <a href="http://www.ac4fun.com/" title="http://www.ac4fun.com" target="_blank" rel="external">http://www.ac4fun.com</a><br><strong>常用命令:</strong><br>    hexo clean    : 清除public文件夹，重新部署之前的步骤<br>    hexo generate : 修改配置或者提交新文章后都需要重新部署，主要是声明public文件夹里面的内容<br>    hexo deploy   : 将更新后的的博客上传至你的github空间</p>
+        <h3 id="什么是plist文件"><a href="#什么是plist文件" class="headerlink" title="什么是plist文件"></a>什么是plist文件</h3><p>将数据直接写在代码里面，不是一种合理的做法。如果数据经常改，就要经常翻开对应的代码进行修改，造成代码扩展性低；</p>
+<p>因此，可以考虑将经常变的数据放在文件中进行存储，程序启动后从文件中读取最新的数据。如果要变动数据，直接修改数据文件即可，不用修改代码；</p>
+<p>一般可以使用属性列表文件存储NSArray或者NSDictionary之类的数据，这种“属性列表文件”的扩展名是plist，因此也称为“plist文件”。</p>
+<h3 id="创建plist文件"><a href="#创建plist文件" class="headerlink" title="创建plist文件"></a>创建plist文件</h3><p><img src="/image/plist%E6%96%87%E4%BB%B6%E5%92%8C%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE/%E5%88%9B%E5%BB%BAplist%E6%96%87%E4%BB%B6.png" alt=""></p>
+<h3 id="解析plist文件"><a href="#解析plist文件" class="headerlink" title="解析plist文件"></a>解析plist文件</h3><ul>
+<li>通过代码来解析plist文件中的数据</li>
+<li><p>获得plist文件的全路径</p>
+  <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSBundle</span> *bundle = [<span class="built_in">NSBundle</span> mainBundle];</div><div class="line"><span class="built_in">NSString</span> *path = [bundle pathForResource:<span class="string">@"shops"</span> ofType:<span class="string">@"plist"</span>];</div></pre></td></tr></table></figure>
+</li>
+<li><p>加载plist文件</p>
+  <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">_shops = [<span class="built_in">NSArray</span> arrayWithContentsOfFile:path];</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="plist文件的解析过程"><a href="#plist文件的解析过程" class="headerlink" title="plist文件的解析过程"></a>plist文件的解析过程</h3><p><img src="/image/plist%E6%96%87%E4%BB%B6%E5%92%8C%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE/plist%E6%96%87%E4%BB%B6%E7%9A%84%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B.png" alt=""></p>
+<h3 id="plist文件的使用注意"><a href="#plist文件的使用注意" class="headerlink" title="plist文件的使用注意"></a>plist文件的使用注意</h3><ul>
+<li>plist的文件名不能叫做“info”、“Info”之类的</li>
+<li>添加plist等文件资源的时候，一定要勾选下面的选项</li>
+<li><img src="/image/plist%E6%96%87%E4%BB%B6%E5%92%8C%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE/plist%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F.png" alt=""></li>
+</ul>
+<h3 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h3><ul>
+<li>作用<ul>
+<li>用到的时候会来加载<ul>
+<li>全局只能被加载一次</li>
+<li>全局都可以使用</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>过程<ul>
+<li>重写成员变量的get方法</li>
+<li>在get方法中判断:<ul>
+<li>如果为空, 加载数据</li>
+<li>如果不为空, 直接返回数据 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>代码实现懒加载  <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">NSArray</span> *)dataArr&#123;</div><div class="line">    <span class="keyword">if</span> (_dataArr == <span class="literal">nil</span>) &#123;</div><div class="line">        <span class="built_in">NSString</span> *dataPath = [[<span class="built_in">NSBundle</span> mainBundle] pathForResource:<span class="string">@"shopData.plist"</span> ofType:<span class="literal">nil</span>];</div><div class="line">        <span class="keyword">self</span>.dataArr = [<span class="built_in">NSArray</span> arrayWithContentsOfFile:dataPath];</div><div class="line">        <span class="built_in">NSMutableArray</span> *tempArr = [<span class="built_in">NSMutableArray</span> array];</div><div class="line">        <span class="keyword">for</span> (<span class="built_in">NSDictionary</span> *dict <span class="keyword">in</span> <span class="keyword">self</span>.dataArr) &#123;</div><div class="line">            GJShop *shop = [GJShop shopWithDict:dict];</div><div class="line">            [tempArr addObject:shop];</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">self</span>.dataArr = tempArr;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> _dataArr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h3><h3 id="用模型取代字典的好处"><a href="#用模型取代字典的好处" class="headerlink" title="用模型取代字典的好处"></a>用模型取代字典的好处</h3><ul>
+<li>使用字典的坏处</li>
+<li><p>一般情况下，设置数据和取出数据都使用“字符串类型的key”，编写这些key时，编辑器没有智能提示，需要手敲</p>
+  <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dict[<span class="string">@"name"</span>] = <span class="string">@"Jack"</span>;</div><div class="line"><span class="built_in">NSString</span> *name = dict[<span class="string">@"name"</span>];</div></pre></td></tr></table></figure>
+</li>
+<li><p>手敲字符串key，key容易写错</p>
+</li>
+<li>Key如果写错了，编译器不会有任何警告和报错，造成设错数据或者取错数据</li>
+<li>使用模型的好处</li>
+<li>所谓模型，其实就是数据模型，专门用来存放数据的对象，用它来表示数据会更加专业</li>
+<li>模型设置数据和取出数据都是通过它的属性，属性名如果写错了，编译器会马上报错，因此，保证了数据的正确性</li>
+<li>使用模型访问属性时，编译器会提供一系列的提示，提高编码效率  <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">app.name = <span class="string">@"Jack"</span>;</div><div class="line"><span class="built_in">NSString</span> *name = app.name;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="字典转模型"><a href="#字典转模型" class="headerlink" title="字典转模型"></a>字典转模型</h3><ul>
+<li>字典转模型的过程最好封装在模型内部</li>
+<li>模型应该提供一个可以传入字典参数的构造方法  <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">instancetype</span>)initWithDict:(<span class="built_in">NSDictionary</span> *)dict;</div><div class="line">+ (<span class="keyword">instancetype</span>)xxxWithDict:(<span class="built_in">NSDictionary</span> *)dict;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="instancetype"><a href="#instancetype" class="headerlink" title="instancetype"></a>instancetype</h3><ul>
+<li>instancetype在类型表示上，跟id一样，可以表示任何对象类型</li>
+<li>instancetype只能用在返回值类型上，不能像id一样用在参数类型</li>
+<li>instancetype比id多一个好处：编译器会检测instancetype的真实类型</li>
+</ul>
+<h3 id="类前缀"><a href="#类前缀" class="headerlink" title="类前缀"></a>类前缀</h3><ul>
+<li>使用Objective-C开发iOS程序时，最好在每个类名前面加一个前缀，用来标识这个类的“老家”在哪</li>
+<li>目的是防止N个人开发了一样的类，冲突了比如Jake Will、Kate Room在同一个项目中都各自开发了个Button类，这样的程序是不能运行起来的</li>
+<li>解决方案：Jake Will的类名叫做JWButton，Kate Room的类名叫做KRButton</li>
+</ul>
+<h3 id="字典转模型的过程"><a href="#字典转模型的过程" class="headerlink" title="字典转模型的过程"></a>字典转模型的过程</h3><p><img src="/image/plist%E6%96%87%E4%BB%B6%E5%92%8C%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE/%E5%AD%97%E5%85%B8%E8%BD%AC%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BF%87%E7%A8%8B.png" alt=""></p>
 
       
     </div>
@@ -407,7 +456,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+            <a href="/tags/plist/" rel="tag">#plist</a>
+          
+            <a href="/tags/懒加载/" rel="tag">#懒加载</a>
+          
+            <a href="/tags/模型/" rel="tag">#模型</a>
           
         </div>
       
@@ -416,12 +469,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/10/16/九宫格计算思路/" rel="next" title="九宫格计算思路">
+                <i class="fa fa-chevron-left"></i> 九宫格计算思路
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/10/10/storyboard文件的认识和UIView控件/" rel="prev" title="storyboard文件的认识和UIView控件">
-                storyboard文件的认识和UIView控件 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/10/16/View的封装/" rel="prev" title="View的封装">
+                View的封装 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -448,8 +505,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/08/搭建Hexo/"
-           data-title="搭建Hexo博客" data-url="http://yoursite.com/2016/10/08/搭建Hexo/">
+      <div class="ds-thread" data-thread-key="2016/10/16/plist文件和加载数据/"
+           data-title="plist文件和加载数据" data-url="http://yoursite.com/2016/10/16/plist文件和加载数据/">
       </div>
     
   </div>
@@ -581,7 +638,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是plist文件"><span class="nav-number">1.</span> <span class="nav-text">什么是plist文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建plist文件"><span class="nav-number">2.</span> <span class="nav-text">创建plist文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析plist文件"><span class="nav-number">3.</span> <span class="nav-text">解析plist文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#plist文件的解析过程"><span class="nav-number">4.</span> <span class="nav-text">plist文件的解析过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#plist文件的使用注意"><span class="nav-number">5.</span> <span class="nav-text">plist文件的使用注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#懒加载"><span class="nav-number">6.</span> <span class="nav-text">懒加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型"><span class="nav-number">7.</span> <span class="nav-text">模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用模型取代字典的好处"><span class="nav-number">8.</span> <span class="nav-text">用模型取代字典的好处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字典转模型"><span class="nav-number">9.</span> <span class="nav-text">字典转模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#instancetype"><span class="nav-number">10.</span> <span class="nav-text">instancetype</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类前缀"><span class="nav-number">11.</span> <span class="nav-text">类前缀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字典转模型的过程"><span class="nav-number">12.</span> <span class="nav-text">字典转模型的过程</span></a></li></ol></div>
             
           </div>
         </section>
