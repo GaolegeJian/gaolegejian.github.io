@@ -41,15 +41,9 @@
     </entry>
     
     <entry>
-      <title></title>
+      <title><![CDATA[重写学习C语言]]></title>
       <url>http://yoursite.com/2016/10/18/%E9%87%8D%E5%86%99%E5%AD%A6%E4%B9%A0C%E8%AF%AD%E9%9F%B3/</url>
-      <content type="html"><![CDATA[<hr>
-<p>title: 重写学习C语言<br>date: 2016-10-18 20:52:58<br>tags:</p>
-<ul>
-<li>C语言学习<br>categories:</li>
-<li>C语言学习</li>
-</ul>
-]]></content>
+      <content type="html"></content>
     </entry>
     
     <entry>
