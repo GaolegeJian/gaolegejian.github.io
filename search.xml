@@ -463,4 +463,54 @@ NSString *name = app.name;
     
   
   
+    
+    <entry>
+      <title></title>
+      <url>http://yoursite.com/404.html</url>
+      <content type="html"><![CDATA[<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8;">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="robots" content="all">
+  <meta name="robots" content="index,follow">
+</head>
+<body>
+
+<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8" homepageurl="your site url " homepagename="回到我的主页">
+</script>
+
+</body>
+</html>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title></title>
+      <url>http://yoursite.com/Untitled.qvnotebook/meta.json</url>
+      <content type="html"><![CDATA[{"name":"Untitled","uuid":"BECA0A01-DC5D-46A5-B1B4-9C647436B360"}]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[about]]></title>
+      <url>http://yoursite.com/about/index.html</url>
+      <content type="html"><![CDATA[<h1 id="欢迎来到高健的技术小站"><a href="#欢迎来到高健的技术小站" class="headerlink" title="欢迎来到高健的技术小站"></a>欢迎来到高健的技术小站</h1><h3 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h3><p> 一个iOS初学者，梦想是吃遍世界，写代码永远没有bug。</p>
+<h3 id="建立博客的初衷"><a href="#建立博客的初衷" class="headerlink" title="建立博客的初衷"></a>建立博客的初衷</h3><p>记录技术路上的点滴和生活<br>锻炼自己的表达能力<br>知识总结管理<br>一步一步见证自己的成长。</p>
+<h3 id="最后给您送上我最喜欢的一句箴言"><a href="#最后给您送上我最喜欢的一句箴言" class="headerlink" title="最后给您送上我最喜欢的一句箴言"></a>最后给您送上我最喜欢的一句箴言</h3><p>怕什么真理无穷，进一寸有一寸的欢喜。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[categories]]></title>
+      <url>http://yoursite.com/categories/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[tags]]></title>
+      <url>http://yoursite.com/tags/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+  
 </search>
