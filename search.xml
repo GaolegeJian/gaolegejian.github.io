@@ -41,12 +41,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[重写学习C语言]]></title>
-      <url>http://yoursite.com/2016/10/18/%E9%87%8D%E5%86%99%E5%AD%A6%E4%B9%A0C%E8%AF%AD%E9%9F%B3/</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[View的封装]]></title>
       <url>http://yoursite.com/2016/10/16/View%E7%9A%84%E5%B0%81%E8%A3%85/</url>
       <content type="html"><![CDATA[<h3 id="View的封装"><a href="#View的封装" class="headerlink" title="View的封装"></a>View的封装</h3><ul>
@@ -494,8 +488,8 @@ NSString *name = app.name;
     <entry>
       <title><![CDATA[about]]></title>
       <url>http://yoursite.com/about/index.html</url>
-      <content type="html"><![CDATA[<h1 id="欢迎来到高健的技术小站"><a href="#欢迎来到高健的技术小站" class="headerlink" title="欢迎来到高健的技术小站"></a>欢迎来到高健的技术小站</h1><h3 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h3><p> 一个iOS初学者，梦想是吃遍世界，写代码永远没有bug。</p>
-<h3 id="建立博客的初衷"><a href="#建立博客的初衷" class="headerlink" title="建立博客的初衷"></a>建立博客的初衷</h3><p>记录技术路上的点滴<br>锻炼自己的表达能力<br>知识总结管理<br>一步一步见证自己的成长。</p>
+      <content type="html"><![CDATA[<h1 id="欢迎来到高健的技术小站"><a href="#欢迎来到高健的技术小站" class="headerlink" title="欢迎来到高健的技术小站"></a>欢迎来到高健的技术小站</h1><h3 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h3><p> Java新手，想学点前端，目标是接本之后考研上名校。</p>
+<h3 id="建立博客的初衷"><a href="#建立博客的初衷" class="headerlink" title="建立博客的初衷"></a>建立博客的初衷</h3><p>提高自己的表达能力<br>对学到的知识进行总结管理</p>
 <h3 id="最后给您送上我最喜欢的一句箴言"><a href="#最后给您送上我最喜欢的一句箴言" class="headerlink" title="最后给您送上我最喜欢的一句箴言"></a>最后给您送上我最喜欢的一句箴言</h3><p>怕什么真理无穷，进一寸有一寸的欢喜。</p>
 ]]></content>
     </entry>
