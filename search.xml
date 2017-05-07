@@ -4,6 +4,18 @@
   
     
     <entry>
+      <title><![CDATA[Sublime Text常用快捷键]]></title>
+      <url>http://yoursite.com/2017/05/07/SublimeText%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+      <content type="html"><![CDATA[<p>⌘：command <br><br>⌃：control <br><br>⌥：option <br><br>⇧：shift <br><br>↩：enter <br><br>⌫：delete <br></p>
+<h4 id="打开-关闭-前往-快捷键-功能"><a href="#打开-关闭-前往-快捷键-功能" class="headerlink" title="(打开/关闭/前往)快捷键 功能"></a>(打开/关闭/前往)快捷键 功能</h4><p>⌘⇧N 打开一个新的sublime窗口 <br><br>⌘N 新建文件 <br><br>⌘⇧W 关闭sublime，关闭所有文件 <br><br>⌘W 关闭当前文件 <br><br>⌘P 跳转、前往文件、前往项目、命令提示、前往method等等（Goto anything） <br><br>⌘⇧T 重新打开最近关闭的文件 <br><br>⌘T 前往文件 <br><br>⌘⌃P 前往项目 <br><br>⌘R 前往method <br><br>⌘⇧P 命令提示 <br><br>⌃G 前往行 <br><br>⌘KB 开关侧栏 <br><br>⌃` 打开控制台 <br><br>⌃- 光标跳回上一个位置 <br><br>⌃⇧- 光标恢复位置<br></p>
+<h4 id="编辑-快捷键-功能"><a href="#编辑-快捷键-功能" class="headerlink" title="(编辑)快捷键 功能"></a>(编辑)快捷键 功能</h4><p>⌘A 全选 <br><br>⌘L 选择行（重复按下将下一行加入选择） <br><br>⌘D 选择词（重复按下时多重选择相同的词进行多重编辑） <br><br>⌃⇧M 选择括号的内容 <br><br>⌘⇧↩ 在当前行前插入新行 <br><br>⌘↩ 在当前行后插入新行 <br><br>⌃⇧K 删除行 <br><br>⌘KK 从光标处删除至行尾 <br><br>⌘K⌫ 从光标处删除至行首 <br><br>⌘⇧D 复制（多）行 <br><br>⌘J 合并（多）行 <br><br>⌘KU 改为大写 <br><br>⌘KL 改为小写 <br><br>⌘C 复制 <br><br>⌘X 剪切 <br><br>⌘V 粘贴 <br><br>⌘/ 注释 <br><br>⌘⌥/ 块注释 <br><br>⌘Z 撤销 <br><br>⌘Y 恢复撤销 <br><br>⌘⇧V 粘贴并自动缩进 <br><br>⌘⌥V 从历史中选择粘贴 <br><br>⌃M 跳转至对应的括号 <br><br>⌘U 软撤销（可撤销光标移动） <br><br>⌘⇧U 软重做（可重做光标移动） <br><br>⌘⇧S 保存所有文件 <br><br>⌘] 向右缩进 <br><br>⌘[ 向左缩进 <br><br>⌘⌥T 特殊符号集 <br><br>⌘⇧L 将选区转换成多个单行选区<br></p>
+<h4 id="查找-替换-快捷键-功能"><a href="#查找-替换-快捷键-功能" class="headerlink" title="(查找/替换)快捷键 功能"></a>(查找/替换)快捷键 功能</h4><p>⌘f 查找 <br><br>⌘⌥f 查找并替换 <br><br>⌘⌥g 查找下一个符合当前所选的内容 <br><br>⌘⌃g 查找所有符合当前选择的内容进行多重编辑 <br><br>⌘⇧F 在所有打开的文件中进行查找<br></p>
+<h4 id="拆分窗口-标签页-快捷键-功能"><a href="#拆分窗口-标签页-快捷键-功能" class="headerlink" title="(拆分窗口/标签页)快捷键 功能"></a>(拆分窗口/标签页)快捷键 功能</h4><p>⌘⌥[1,2,3,4] 单列、双列、三列、四列<br>⌘⌥5 网格（4组） <br><br>⌃[1,2,3,4] 焦点移动到相应的组（分屏编号） <br><br>⌃⇧[1,2,3,4] 将当前文件移动到相应的组（分屏编号） <br><br>⌘[1,2,3,4] 选择相应的标签页<br></p>
+<h4 id="快捷操作-快捷键-功能"><a href="#快捷操作-快捷键-功能" class="headerlink" title="(快捷操作)快捷键 功能"></a>(快捷操作)快捷键 功能</h4><p>⌘⌃ 上下键 两行交换位置 <br><br>⌘KB  显示/隐藏侧边<br></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[我希望进入大学时就能知道的一些事（转）]]></title>
       <url>http://yoursite.com/2017/03/07/%E6%88%91%E5%B8%8C%E6%9C%9B%E8%BF%9B%E5%85%A5%E5%A4%A7%E5%AD%A6%E6%97%B6%E5%B0%B1%E8%83%BD%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B/</url>
       <content type="html"><![CDATA[<p>又读到一篇很好的文章，忍不住就翻译了过来。每个月我可能会读一百来篇来自英语世界的文章，其中可能有些好文会让我忍不住想翻译过来分享下，这也算是百里挑一吧。<br>下面是原文，最后我会写写我的感想。</p>
