@@ -4,6 +4,399 @@
   
     
     <entry>
+      <title><![CDATA[String类]]></title>
+      <url>http://yoursite.com/2017/05/28/String%E7%B1%BB/</url>
+      <content type="html"><![CDATA[<h3 id="字符串的使用"><a href="#字符串的使用" class="headerlink" title="字符串的使用"></a>字符串的使用</h3><p>Java字符串就是<strong>Unicode</strong>字符序列，例如字符串 “Java” 就是4个Unicode字符J,a,v,a组成的。<br>Java没有内置的字符串类型，而是在标准Java类库中提供了一个预定义的类String，每个用双引号括起来的字符串都是String类的一个实例。</p>
+<p><strong>String类是不可变字符串序列。</strong><br><strong>StringBuilder和StringBuffer是可变字符串序列</strong><br><strong>StringBuilder和StringBuffer的区别：</strong></p>
+<ul>
+<li>StringBuilder (线程不安全，效率高)</li>
+<li>StringBuffer是(线程安全，效率低)。<br>之后会写一写String类的源码分析，其实也没什么可写的，源码的注释写的很清楚，可以试试把源码粘出来，自己修改看看会有什么样的效果。</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Java学习笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Java集合类(String) </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java数组(Array)]]></title>
+      <url>http://yoursite.com/2017/05/28/Java%E6%95%B0%E7%BB%84-Array/</url>
+      <content type="html"><![CDATA[<h3 id="数组概述"><a href="#数组概述" class="headerlink" title="数组概述"></a>数组概述</h3><ul>
+<li><strong>数组是相同类型数据的有序集合</strong><br> 数组描述的是相同类型的若干个数据，按照一定的先后次序排列组合而成。其中，每一个数据称作一个数组元素，每个数组元素可以通过一个下标来访问它们，数组元素相当于对象的成员变量.</li>
+<li>数组的特点：<ol>
+<li>其长度是确定的。数组一旦被创建，它的大小是不可以改变的。</li>
+<li>其元素必须是相同类型，不允许出现混合类型。</li>
+<li>数组中的元素可以是任意数据类型，包括基本数据类型和引用类型</li>
+<li>数组索引从0开始。</li>
+<li>数组属于引用类型<ul>
+<li>Members: length, elements of the array<h3 id="一维数组的声明"><a href="#一维数组的声明" class="headerlink" title="一维数组的声明"></a>一维数组的声明</h3><strong>一维数组的声明方式</strong>有两种：</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<ol>
+<li><code>type[] arr_name;</code></li>
+<li><code>type arr_name[];</code><br><strong>例如：</strong><br> int[] intArrays;    int intArrays[];<br> double[] doubleArrays;<br> Person[] pArrays;<br> String[] strArrays;</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> Java学习笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Java集合类(Array) </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[接口(interface)]]></title>
+      <url>http://yoursite.com/2017/05/26/%E6%8E%A5%E5%8F%A3-interface/</url>
+      <content type="html"><![CDATA[<p>为什么需要接口？接口和抽象类的区别？</p>
+<ul>
+<li>接口就是比 “抽象类” 还 “抽象” 的 “抽象类”，可以更加规范的对子类进行约束。<strong>全面的专业的实现了：规范和具体实现的分离。</strong></li>
+<li><strong>接口就是规范，定义的是一组规则，体现了现实世界中“如果你是…则必须能…”的思想。</strong>(如果你是天使，则必须能飞。如果你是汽车，则必须能跑。)</li>
+<li><strong>接口的本质是契约，就像我们人间的法律一样。制定好后大家都遵守。</strong></li>
+<li><strong>项目的具体需求是多变的，我们必须以不变应万变才能从容开发，此处的 “不变” 就是 “规范”。因此，我们开发项目往往都是面向接口编程！</strong><br><strong>如何定义接口？</strong></li>
+<li>格式：<pre><code>[访问修饰符] interface 接口名 [extends 父接口1， 父接口2...] {
+   常量定义    // 总是public static final
+   方法定义    // 总是public, abstract
+}
+</code></pre>子类通过implements来实现接口中的规范<br>接口不能创建实例，但是可用于声明引用变量类型。<br>一个类实现了接口，必须实现接口中所有的方法，并且这些方法只能是public的。<br><strong>接口支持多继承</strong></li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Java学习笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 面向对象 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[抽象类和抽象方法]]></title>
+      <url>http://yoursite.com/2017/05/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95/</url>
+      <content type="html"><![CDATA[<h4 id="为什么需要抽象类？如何定义抽象类？"><a href="#为什么需要抽象类？如何定义抽象类？" class="headerlink" title="为什么需要抽象类？如何定义抽象类？"></a>为什么需要抽象类？如何定义抽象类？</h4><ul>
+<li>抽象类是一种_模板模式。抽象类为所有子类提供了一个通用模板，子类可以在这个模板的基础上进行扩展。_</li>
+<li><strong>通过抽象类，可以避免子类设计的随意性。</strong>通过抽象类，我们就可以做到严格限制子类的设计，使子类之间更加通用。<h4 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h4></li>
+</ul>
+<ol>
+<li>有抽象方法的类只能定义抽象类</li>
+<li>抽象类不能实例化，及不能用new来实例化抽象类。</li>
+<li>抽象类可以包含属性、方法、构造方法。但是构造方法不能用new来实例，只能用来被子类调用。</li>
+<li>抽象类只能用来继承。</li>
+<li>抽象方法必须被子类实现。</li>
+</ol>
+<p><strong>抽象方法简单说就是 只有方法声明，没有方法实现，将方法的设计和方法的实现分离了。 代码如下：</strong><br>    public abstract class Animal() {   // 抽象类<br>       public abstract void run();   // 抽象方法<br>    }</p>
+<pre><code>class Cat extends Animal {
+   @Override
+   public void run() {
+    System.out.println(&quot;猫咪跑&quot;)
+   }
+}
+</code></pre>]]></content>
+      
+        <categories>
+            
+            <category> Java学习笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 面向对象 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[多态(polymorphism)]]></title>
+      <url>http://yoursite.com/2017/05/25/%E5%A4%9A%E6%80%81-polymorphism/</url>
+      <content type="html"><![CDATA[<p>多态是OOP中的一个重要特性，主要是用来实现动态联编的；换句话说，就是程序的最终状态只有在执行过程中才被决定而非在编译期间就决定了。这对于大型系统来说能提高系统的灵活性和扩展性。<br><em>Java中如何实现多态？使用多态的好处？</em></p>
+<ul>
+<li>引用变量的两种类型：<ul>
+<li>编译时类型（模糊一点，一般是一个父类）<ul>
+<li>由声明时的类型决定。<ul>
+<li>运行时类型（运行时，具体是哪个子类就是哪个子类）</li>
+<li>由实际对应的对象类型决定。<br>多态的存在要有3个必要条件：</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>要有继承。</li>
+<li>要有方法重写。</li>
+<li>父类引用指向子类对象。</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> Java学习笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 面向对象 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[隐藏/封装(encapsulation)]]></title>
+      <url>http://yoursite.com/2017/05/25/%E9%9A%90%E8%97%8F-%E5%B0%81%E8%A3%85-encapsulation/</url>
+      <content type="html"><![CDATA[<h4 id="为什么需要封装？封装的作用和含义？"><a href="#为什么需要封装？封装的作用和含义？" class="headerlink" title="为什么需要封装？封装的作用和含义？"></a>为什么需要封装？封装的作用和含义？</h4><ul>
+<li>我要看电视，只需要按一下开关和换台就可以了。有必要了解电视机内部的结构吗？有必要碰碰显像管吗？</li>
+<li>我要开车，有必要知道汽车的内部是怎么构造的吗？</li>
+</ul>
+<p><strong>隐藏对象内部的复杂性，只对外公开简单的接口。便于外界调用，从而提高系统的可扩展性、可维护性。</strong></p>
+<h4 id="我们程序设计要追求“高内聚，低耦合”。"><a href="#我们程序设计要追求“高内聚，低耦合”。" class="headerlink" title="我们程序设计要追求“高内聚，低耦合”。"></a>我们程序设计要追求“高内聚，低耦合”。</h4><ul>
+<li>高内聚就是类的内部数据操作细节自己完成，不允许外部干涉。</li>
+<li>低耦合就是仅暴露少量的方法给外部使用。<h4 id="使用访问控制符，实现封装"><a href="#使用访问控制符，实现封装" class="headerlink" title="使用访问控制符，实现封装"></a>使用访问控制符，实现封装</h4><img src="/image/%E5%B0%81%E8%A3%85/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E7%AC%A6.png" alt=""><br><strong>封装要点：</strong></li>
+<li>类的属性的处理：<ol>
+<li>一般使用private. （除非本属性确定会让子类继承）<ol>
+<li>提供相应的get/set方法来访问相关属性，这些方法通常是public，从而提供对属性的读取操作。 （注意：boolean变量的get方法是用：is开头！）</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>一些只用于本类的辅助性方法可以用private。<br><strong>希望其他类调用的方法用public</strong></li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Java学习笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 面向对象 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[final关键字]]></title>
+      <url>http://yoursite.com/2017/05/25/final%E5%85%B3%E9%94%AE%E5%AD%97/</url>
+      <content type="html"><![CDATA[<p><strong>修饰变量：</strong></p>
+<ul>
+<li>作用：把一个变量修饰为常量<br><strong>修饰方法</strong></li>
+<li>作用：该方法不可被子类重写，但是可以被重载<br><strong>修饰类</strong></li>
+<li>作用：修饰的类不能有子类，不能被继承。比如：Math、String.</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Java学习笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 面向对象 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Object类和super关键字]]></title>
+      <url>http://yoursite.com/2017/05/23/Object%E7%B1%BB%E5%92%8Csuper%E5%85%B3%E9%94%AE%E5%AD%97/</url>
+      <content type="html"><![CDATA[<h4 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h4><p>Object类是所有Java类的根基类。<br>如果在类的声明中未使用extends关键字指明基类，则默认基类为Object类<br>重写：toString方法：</p>
+<ul>
+<li>默认返回：包名+类名+@+哈希码（根据对象内存位置生成，唯一不重复）<h4 id="super关键字"><a href="#super关键字" class="headerlink" title="super关键字"></a>super关键字</h4>super是直接父类对象的引用。可以通过super来访问父类中被子类覆盖（重写）的方法或属性。<br>普通方法：</li>
+<li>没有顺序限制。可以随便调用<br>构造函数中：</li>
+<li>任何类的构造函数中，若是构造函数的第一行代码没有显式的调用super(…); 那么Java默认都会调用super(); 作为父类的初始化函数。所以你这里的super();加不加都无所谓。</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Java学习笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 面向对象 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[继承]]></title>
+      <url>http://yoursite.com/2017/05/22/%E7%BB%A7%E6%89%BF/</url>
+      <content type="html"><![CDATA[<h3 id="面向对象三大特征"><a href="#面向对象三大特征" class="headerlink" title="面向对象三大特征"></a>面向对象三大特征</h3><ul>
+<li>继承</li>
+<li>封装/隐藏</li>
+<li>多态<br>为了适应需求的多种变化，使代码变得更加通用！</li>
+</ul>
+<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><ol>
+<li>类是对对象的抽象，继承是对某一批类的抽象，从而实现对现实世界更好的建模。</li>
+<li>提高代码的复用性！</li>
+<li>extends的意思是 “扩展”。子类是父类的扩展<br><strong>小结</strong></li>
+<li>子类继承父类，可以得到父类的全部属性和方法（除了父类的构造方法）。</li>
+<li>Java中类只有单继承，没有像C++那样的多继承。多继承会引起混乱，使得继承链过于复杂，系统难以维护。就像我们现实中，如果你有多个父亲，那是一个多么混乱的世界啊。多继承，就是为了实现代码的复用性，却引入了复杂性，使得系统类之间的关系混乱。</li>
+<li>Java中的多继承，可以通过接口来实现</li>
+<li>如果定义一个类时，没有调用extends，则它的父类是：java.lang.Object</li>
+<li>不同的叫法：超类、父类、基类、子类、派生类<h4 id="继承方法的重写（override）"><a href="#继承方法的重写（override）" class="headerlink" title="继承方法的重写（override）"></a>继承方法的重写（override）</h4></li>
+<li>在子类中可以根据需要对从父类中继承来的方法进行重写。</li>
+<li>重写方法必须和被重写方法具有<strong>相同方法名称、参数列表</strong>和<strong>返回类型</strong>。</li>
+<li>重写方法不能使用比重写方法更严格的访问权限。（由于多态）<h4 id="组合VS继承"><a href="#组合VS继承" class="headerlink" title="组合VS继承"></a>组合VS继承</h4><strong>“is-a” 关系使用继承！</strong><br><strong>“has-a” 关系使用继承</strong><br>最生动的比方：<br><strong> 继承是说“我父亲在家里给我帮了很大的忙”。</strong><br><strong> 组合是说“我请了个老头在我家里干活”。</strong><br><strong>区别：</strong>使用组合可以用到另一个类中私有的变量和方法，而继承就不可以用到父类的 私有的变量和方法了<br>他们都有各自的好处，要灵活的运用。</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> Java学习笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 面向对象 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[static关键字和this关键字]]></title>
+      <url>http://yoursite.com/2017/05/21/static%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8Cthis%E5%85%B3%E9%94%AE%E5%AD%97/</url>
+      <content type="html"><![CDATA[<h3 id="static关键字"><a href="#static关键字" class="headerlink" title="static关键字"></a>static关键字</h3><p><strong>在类中，用static声明的成员变量为静态成员变量，或者叫做：类属性，类变量。</strong></p>
+<ul>
+<li>它为该类的公用变量，属于类，被该类的所有实例共享，在类被载入时被显示初始化。</li>
+<li>对于该类的所有对象来说，static成员变量只有一份。被该类的所有对象共享！</li>
+<li>可以使用 ”对象.类属性“ 来调用。不过，一般都是用 ”类名.类属性“ 调用。</li>
+<li>static变量置于方法区中！<br><strong>用static声明的方法为静态方法</strong></li>
+<li>不需要对象，就可以调用（类名.方法名）</li>
+<li>在调用该方法时，不会将对象的引用传递给它，所以在static方法中不可访问非static的成员。</li>
+</ul>
+<p><strong>类只能使用类的方法，对象既能使用类的方法也能使用自己的方法。</strong></p>
+<h3 id="this关键字"><a href="#this关键字" class="headerlink" title="this关键字"></a>this关键字</h3><p>普通方法中，this总是指向调用该方法的对象。<br>构造方法中，this总是指向正要初始化的对象。<br>this不能用于static方法。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Java学习笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 面向对象 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[构造方法]]></title>
+      <url>http://yoursite.com/2017/05/20/%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/</url>
+      <content type="html"><![CDATA[<p>构造方法 又称为 构造器(constructor)<br>构造器用于构造该类的实例(object)<br>格式如下：</p>
+<ul>
+<li>【修饰符】类名 （形参列表）{<pre><code>// n条语句
+</code></pre>   }<br>构造方法是一种特殊的方法：</li>
+</ul>
+<ol>
+<li>通过new关键字调用！！</li>
+<li>构造器虽然有返回值，但是不能定义返回类型（返回值的类型肯定是本类），不能在构造器里调用return</li>
+<li>如果我们没有定义构造器，则系统会自动定义一个无参的构造函数。如果已定义则编译器不会添加！</li>
+<li>构造器的方法名必须和类名一致！</li>
+<li>作用：构造该类的对象，经常也用来初始化对象的属性。 <h3 id="重载（overload）"><a href="#重载（overload）" class="headerlink" title="重载（overload）"></a>重载（overload）</h3>方法的重载是指一个类中可以定义有相同名字，但参数不同的多个方法。调用时，会根据不同的参数表选择对应的方法。<br>两同三不同</li>
+<li>同一个类，同一个方法名</li>
+<li>不同：参数列表不同（类型，个数，顺序不同）<br>只有返回值不同不构成方法的重载（<br>int a(String str) {};<br>void a(String i),<br>调用 :a();<br>谁能告诉我是调用哪个方法？）<br>只有形参的名称不同，不构成方法的重载<br>与普通方法一样，构造方法也可以重载</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> Java学习笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 面向对象 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[垃圾回收机制]]></title>
+      <url>http://yoursite.com/2017/05/20/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/</url>
+      <content type="html"><![CDATA[<p><strong>对象空间的分配：</strong></p>
+<ul>
+<li>使用new关键字创建对象即可<br><strong>对象空间的释放：</strong></li>
+<li>将对象赋值null即可。垃圾回收器负责回收所有“不可达”对象的内存空间<br><strong>要点：</strong></li>
+<li>程序员无权调用垃圾回收器。</li>
+<li>程序员可以通过System,gc()。通知GC运行，但是Java规范并不能保证立刻运行。</li>
+<li>finalize方法，是Java提供给程序员用来释放对象或资源的方法，但是尽量少用。</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Java学习笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 面向对象 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[对象和类的概念]]></title>
       <url>http://yoursite.com/2017/05/17/%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BB%E7%9A%84%E6%A6%82%E5%BF%B5/</url>
       <content type="html"><![CDATA[<h3 id="面向对象（OOP）的本质："><a href="#面向对象（OOP）的本质：" class="headerlink" title="面向对象（OOP）的本质："></a>面向对象（OOP）的本质：</h3><ul>
@@ -35,10 +428,7 @@
 </li>
 <li>面向对象中，整个程序的基本单位是类，方法是从属于类的</li>
 <li>方法定义格式：<ul>
-<li>方法定义格式：<ul>
-<li>【修饰符】方法返回值类型  方法名(形参列表) {<br>  // n条语句<br>  }</li>
-</ul>
-</li>
+<li>【修饰符】方法返回值类型  方法名(形参列表) {<br> // n条语句<br> }</li>
 </ul>
 </li>
 <li>Java中方法参数传递是：<strong>值传递！</strong><h3 id="内存分析"><a href="#内存分析" class="headerlink" title="内存分析"></a>内存分析</h3></li>
@@ -51,11 +441,25 @@
 </ul>
 </li>
 <li>方法区：<ul>
-<li>存放：类的信息（代码）、static变量、常量池（字符串常量）等。</li>
+<li>存放：类的信息（代码）、static变量、常量池（字符串常量）等。w</li>
 </ul>
 </li>
 </ul>
 ]]></content>
+      
+        <categories>
+            
+            <category> Java学习笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 面向对象 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -68,6 +472,14 @@
 <h4 id="拆分窗口-标签页-快捷键-功能"><a href="#拆分窗口-标签页-快捷键-功能" class="headerlink" title="(拆分窗口/标签页)快捷键 功能"></a>(拆分窗口/标签页)快捷键 功能</h4><p>⌘⌥[1,2,3,4] 单列、双列、三列、四列<br>⌘⌥5 网格（4组） <br><br>⌃[1,2,3,4] 焦点移动到相应的组（分屏编号） <br><br>⌃⇧[1,2,3,4] 将当前文件移动到相应的组（分屏编号） <br><br>⌘[1,2,3,4] 选择相应的标签页<br></p>
 <h4 id="快捷操作-快捷键-功能"><a href="#快捷操作-快捷键-功能" class="headerlink" title="(快捷操作)快捷键 功能"></a>(快捷操作)快捷键 功能</h4><p>⌘⌃ 上下键 两行交换位置 <br><br>⌘KB  显示/隐藏侧边<br></p>
 ]]></content>
+      
+        
+        <tags>
+            
+            <tag> Sublime Text </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -82,6 +494,24 @@
 <h3 id="5-不要停留在过去"><a href="#5-不要停留在过去" class="headerlink" title="5. 不要停留在过去"></a>5. 不要停留在过去</h3><p>还在伯克利时，我感觉得学习 Donna Lee（一种旧式博普爵士乐标准）以成为一名好的音乐家。有一次我获得了一场很棒的演出机会，将和低音贝斯手维克托·贝利（Victor Bailey）去日本一个月。<br>他当时是世界上最好的贝斯手之一，曾和韦恩·肖特（Wayne Shorter，萨克斯管吹奏家），乔·查威努（Joe Zawinul，键盘手），桑尼·罗林斯（Sonny Rollins，爵士音乐家），斯汀（Sting，歌手）等等著名音乐人一起演出。<br>他听说我会演奏一点 Donna Lee，然后说到：“哥们，爵士就是要发明新的东西。对于一个 50 年后的音乐家却被困在 1950 年代，这就像一个 1950 年代的音乐家被困在了 1900 年代。这没什么酷的。”<br>几周后，我坐在钢琴前安静的创作我自己的歌，然后第一次他对我说：“嗨 —— 哇 —— 这是什么？这太棒了，哥们，能给我看看么？”<br>创新不仅仅是模仿，不要停留在过去。</p>
 <h3 id="6-毕业了，当有价值"><a href="#6-毕业了，当有价值" class="headerlink" title="6. 毕业了，当有价值"></a>6. 毕业了，当有价值</h3><p>当你还在这里时，把自己锁在练习棚里吧。享受这美妙的隔离期，没有其他任何责任，仅仅需要提升自己。但当你离开这里后，冲向书店的商业区，开始一周读一本关于企业经营的书，比如市场营销。<br>永远不要低估赚钱对制作音乐的重要性。丢弃那些你曾拥有的奇怪的禁忌。金钱仅仅是你对其他人的生活创造了价值的中立证明。确保你在赚钱是确保你在做一些对其他人有价值的事。<br>记住，这通常来自于做大多数人不做的事情。例如：这个世界支付给玩电子游戏的人多少钱？几乎可以忽略不计，因为几乎每个人都在玩。那么这个世界又支付给制作电子游戏的人多少钱？数以吨计，因为很少有人能做这件事，而很多人却想要玩。<br>所以：<br>做少数足够聪明能赚到钱来制作音乐的人之一，而非假装这不重要。<br>做少数有勇气做一些令人震惊的事情的人之一。<br>做少数把这里的课程作为起点，并驱动自己做得比学到的更多的人之一。<br>做少数知道如何帮助自己，而非期待别人来帮你的人之一。<br>做少数做的远远多于要求的人之一。<br>最重要的是，当其他人在网上冲浪，在 Facebook 上调情和追剧时，做少数呆在练习棚里练习的人之一。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 大学 </category>
+            
+            <category> 转载 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 经验 </tag>
+            
+            <tag> 成长 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -119,6 +549,14 @@
 <li>“死循环”也有价值，它通过不间断执行，快速消耗CPU的计算资源，可以用来测试CPU性能</li>
 </ul>
 ]]></content>
+      
+        
+        <tags>
+            
+            <tag> IPO </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -126,6 +564,22 @@
       <url>http://yoursite.com/2016/10/08/%E6%90%AD%E5%BB%BAHexo/</url>
       <content type="html"><![CDATA[<p><strong>搭建博客教程:</strong> <a href="http://www.ac4fun.com/" title="http://www.ac4fun.com" target="_blank" rel="external">http://www.ac4fun.com</a><br><strong>常用命令:</strong><br>    hexo clean    : 清除public文件夹，重新部署之前的步骤<br>    hexo generate : 修改配置或者提交新文章后都需要重新部署，主要是声明public文件夹里面的内容<br>    hexo deploy   : 将更新后的的博客上传至你的github空间</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> Hexo </category>
+            
+            <category> Node.js </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+        
     </entry>
     
   
@@ -161,7 +615,7 @@
     <entry>
       <title><![CDATA[about]]></title>
       <url>http://yoursite.com/about/index.html</url>
-      <content type="html"><![CDATA[<h1 id="欢迎来到高健的技术小站"><a href="#欢迎来到高健的技术小站" class="headerlink" title="欢迎来到高健的技术小站"></a>欢迎来到高健的技术小站</h1><h3 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h3><p> Java新手，想学点前端，目标是接本之后考研上名校。</p>
+      <content type="html"><![CDATA[<h1 id="欢迎来到高健的技术小站"><a href="#欢迎来到高健的技术小站" class="headerlink" title="欢迎来到高健的技术小站"></a>欢迎来到高健的技术小站</h1><h3 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h3><p> Java开发者，偶尔写写Javascript。</p>
 <h3 id="建立博客的目的"><a href="#建立博客的目的" class="headerlink" title="建立博客的目的"></a>建立博客的目的</h3><p>提高自己的表达能力<br>对学到的知识进行总结管理</p>
 <h3 id="最后给您送上我最喜欢的一句箴言"><a href="#最后给您送上我最喜欢的一句箴言" class="headerlink" title="最后给您送上我最喜欢的一句箴言"></a>最后给您送上我最喜欢的一句箴言</h3><p>怕什么真理无穷，进一寸有一寸的欢喜。</p>
 ]]></content>
