@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="面向对象," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -86,17 +86,18 @@
 
 
 
-<meta name="description" content="Object类Object类是所有Java类的根基类。如果在类的声明中未使用extends关键字指明基类，则默认基类为Object类重写：toString方法：  默认返回：包名+类名+@+哈希码（根据对象内存位置生成，唯一不重复）super关键字super是直接父类对象的引用。可以通过super来访问父类中被子类覆盖（重写）的方法或属性。普通方法： 没有顺序限制。可以随便调用构造函数中： 任何类">
-<meta name="keywords" content="面向对象">
+<meta name="description" content="基本数据类型的包装类 字符串相关类： 不可变字符串序列：String 可变字符串序列：StringBuilder、StringBuffer时间处理相关类： Date DateFormat、SimpleDateFormat Calendar、GregorianCalendarDate时间类(java.util.Date) 标准Java类库中包含一个Date类，它的对象表示一个特定的瞬间，精确到毫秒。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Object类和super关键字">
-<meta property="og:url" content="http://yoursite.com/2017/05/23/Object类和super关键字/index.html">
+<meta property="og:title" content="Java常用类">
+<meta property="og:url" content="http://yoursite.com/2017/06/01/Java常用类/index.html">
 <meta property="og:site_name" content="GaoJian&#39;s blog">
-<meta property="og:description" content="Object类Object类是所有Java类的根基类。如果在类的声明中未使用extends关键字指明基类，则默认基类为Object类重写：toString方法：  默认返回：包名+类名+@+哈希码（根据对象内存位置生成，唯一不重复）super关键字super是直接父类对象的引用。可以通过super来访问父类中被子类覆盖（重写）的方法或属性。普通方法： 没有顺序限制。可以随便调用构造函数中： 任何类">
-<meta property="og:updated_time" content="2017-05-31T04:07:41.000Z">
+<meta property="og:description" content="基本数据类型的包装类 字符串相关类： 不可变字符串序列：String 可变字符串序列：StringBuilder、StringBuffer时间处理相关类： Date DateFormat、SimpleDateFormat Calendar、GregorianCalendarDate时间类(java.util.Date) 标准Java类库中包含一个Date类，它的对象表示一个特定的瞬间，精确到毫秒。">
+<meta property="og:image" content="http://yoursite.com/image/Java%E5%B8%B8%E7%94%A8%E7%B1%BB/%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E7%9B%B8%E5%85%B3%E7%B1%BB.png">
+<meta property="og:updated_time" content="2017-06-05T08:03:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Object类和super关键字">
-<meta name="twitter:description" content="Object类Object类是所有Java类的根基类。如果在类的声明中未使用extends关键字指明基类，则默认基类为Object类重写：toString方法：  默认返回：包名+类名+@+哈希码（根据对象内存位置生成，唯一不重复）super关键字super是直接父类对象的引用。可以通过super来访问父类中被子类覆盖（重写）的方法或属性。普通方法： 没有顺序限制。可以随便调用构造函数中： 任何类">
+<meta name="twitter:title" content="Java常用类">
+<meta name="twitter:description" content="基本数据类型的包装类 字符串相关类： 不可变字符串序列：String 可变字符串序列：StringBuilder、StringBuffer时间处理相关类： Date DateFormat、SimpleDateFormat Calendar、GregorianCalendarDate时间类(java.util.Date) 标准Java类库中包含一个Date类，它的对象表示一个特定的瞬间，精确到毫秒。">
+<meta name="twitter:image" content="http://yoursite.com/image/Java%E5%B8%B8%E7%94%A8%E7%B1%BB/%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E7%9B%B8%E5%85%B3%E7%B1%BB.png">
 
 
 
@@ -114,7 +115,7 @@
   };
 </script>
 
-  <title> Object类和super关键字 | GaoJian's blog </title>
+  <title> Java常用类 | GaoJian's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -287,7 +288,7 @@
             
             
               
-                Object类和super关键字
+                Java常用类
               
             
           </h1>
@@ -299,38 +300,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-05-23T17:20:10+08:00" content="2017-05-23">
-              2017-05-23
+            <time itemprop="dateCreated" datetime="2017-06-01T20:59:33+08:00" content="2017-06-01">
+              2017-06-01
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Java学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">Java学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/05/23/Object类和super关键字/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/23/Object类和super关键字/" itemprop="commentsCount"></span>
+                <a href="/2017/06/01/Java常用类/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/01/Java常用类/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -358,12 +340,59 @@
       
 
       
-        <h4 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h4><p>Object类是所有Java类的根基类。<br>如果在类的声明中未使用extends关键字指明基类，则默认基类为Object类<br>重写：toString方法：</p>
-<ul>
-<li>默认返回：包名+类名+@+哈希码（根据对象内存位置生成，唯一不重复）<h4 id="super关键字"><a href="#super关键字" class="headerlink" title="super关键字"></a>super关键字</h4>super是直接父类对象的引用。可以通过super来访问父类中被子类覆盖（重写）的方法或属性。<br>普通方法：</li>
-<li>没有顺序限制。可以随便调用<br>构造函数中：</li>
-<li>任何类的构造函数中，若是构造函数的第一行代码没有显式的调用super(…); 那么Java默认都会调用super(); 作为父类的初始化函数。所以你这里的super();加不加都无所谓。</li>
+        <p>基本数据类型的包装类</p>
+<h3 id="字符串相关类："><a href="#字符串相关类：" class="headerlink" title="字符串相关类："></a>字符串相关类：</h3><ul>
+<li>不可变字符串序列：String</li>
+<li>可变字符串序列：StringBuilder、StringBuffer<h3 id="时间处理相关类："><a href="#时间处理相关类：" class="headerlink" title="时间处理相关类："></a>时间处理相关类：</h3></li>
+<li>Date</li>
+<li>DateFormat、SimpleDateFormat</li>
+<li>Calendar、GregorianCalendar<br><img src="/image/Java%E5%B8%B8%E7%94%A8%E7%B1%BB/%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E7%9B%B8%E5%85%B3%E7%B1%BB.png" alt=""><br><strong>Date时间类(java.util.Date)</strong></li>
+<li>标准Java类库中包含一个Date类，它的对象表示一个特定的瞬间，精确到毫秒。</li>
+<li>Java中时间的表示说白了也是数字，是从：标准纪元1970.1.1 0点到某个时刻的毫秒数，类型是long。<br><strong>DateFormat和SimpleDateFormat(java.text.DateFormat)</strong> </li>
+<li>作用：完成字符串和时间对象的转化！</li>
+<li>Format和parse<br><strong>Calendar和GregorianCalendar(java.util)</strong></li>
+<li>人类对于时间的认识是：某年某月某日这样的日期概念。计算机是long类型的数字，通过Calendar在二者之间搭起桥梁！</li>
+<li>GregorianCalendar是Calendar的一个具体子类，提供了世界上大多数国家/地区使用的标准日历系统。</li>
+<li><strong>注意：</strong><ul>
+<li>月份：一月是0，二月是1，以此类推，12月是11</li>
+<li>星期：周日是1，周一是2，。。。。。周六是7</li>
 </ul>
+</li>
+</ul>
+<h3 id="Math类"><a href="#Math类" class="headerlink" title="Math类"></a>Math类</h3><h3 id="File类"><a href="#File类" class="headerlink" title="File类"></a>File类</h3><p><strong>File类(java.io.File)：</strong></p>
+<ul>
+<li>文件和目标路径名的抽象表示形式</li>
+<li>通过File对象可以访问文件的属性<pre><code>public boolean canRead()        public boolean canWrite()
+    public boolean exists()             public boolean isDirectory()
+    public boolean isFile()              public boolean isHidden()
+    public long lastModified()        public long length()
+    public String getName()           public String getPath()
+</code></pre></li>
+<li>通过File对象创建空文件或目录（在该对象所指的文件或目录不存在的情况下）<pre><code>public boolean createNewFile()throws IOException
+    public boolean delete()
+    public boolean mkdir(),   mkdirs()   // 注意两个的区别！
+</code></pre></li>
+</ul>
+<h3 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h3><h3 id="包装类-Wrapper-Class-："><a href="#包装类-Wrapper-Class-：" class="headerlink" title="包装类(Wrapper Class)："></a>包装类(Wrapper Class)：</h3><p>将基本数据类型转化为对象</p>
+<ul>
+<li>byte -> Byte</li>
+<li>boolean -> Boolean</li>
+<li>short -> Short</li>
+<li>char -> Character</li>
+<li>int -> Integer</li>
+<li>long -> Long</li>
+<li>float -> Float</li>
+<li>double -> Double<br><strong>自动装箱</strong></li>
+<li>基本数据类型就自动地封装到与它相同类型的包装类中，如：</li>
+<li>Integer i = 100;</li>
+<li>本质上是，编译器编译时为我们添加了：</li>
+<li>Integer i = new Integer(100);<br><strong>自动拆箱</strong></li>
+<li>包装类对象自动转换成基本数据类型。 如：</li>
+<li>int a = new Integer(100);</li>
+<li>本质上，编译器编译时为我们添加了：</li>
+<li>int a = new Integer(100).intValue();<br>JDK5.0之后有了自动装箱，通过编译器帮我们改进代码。</li>
+</ul>
+<p>你今后人生的艰难，恰恰不是因为你没能考上一个满意的学校，而是在这所学校里，在一个能让自己自由充分成长的黄金四年里，把自己给荒废了。 </p>
 
       
     </div>
@@ -399,27 +428,21 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/面向对象/" rel="tag">#面向对象</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/22/继承/" rel="next" title="继承">
-                <i class="fa fa-chevron-left"></i> 继承
+              <a href="/2017/05/28/String类/" rel="next" title="String类">
+                <i class="fa fa-chevron-left"></i> String类
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/25/final关键字/" rel="prev" title="final关键字">
-                final关键字 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/06/02/自动装箱和拆箱/" rel="prev" title="自动装箱和拆箱">
+                自动装箱和拆箱 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -446,8 +469,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/05/23/Object类和super关键字/"
-           data-title="Object类和super关键字" data-url="http://yoursite.com/2017/05/23/Object类和super关键字/">
+      <div class="ds-thread" data-thread-key="2017/06/01/Java常用类/"
+           data-title="Java常用类" data-url="http://yoursite.com/2017/06/01/Java常用类/">
       </div>
     
   </div>
@@ -579,7 +602,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Object类"><span class="nav-number">1.</span> <span class="nav-text">Object类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#super关键字"><span class="nav-number">2.</span> <span class="nav-text">super关键字</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串相关类："><span class="nav-number">1.</span> <span class="nav-text">字符串相关类：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间处理相关类："><span class="nav-number">2.</span> <span class="nav-text">时间处理相关类：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Math类"><span class="nav-number">3.</span> <span class="nav-text">Math类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File类"><span class="nav-number">4.</span> <span class="nav-text">File类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举类"><span class="nav-number">5.</span> <span class="nav-text">枚举类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包装类-Wrapper-Class-："><span class="nav-number">6.</span> <span class="nav-text">包装类(Wrapper Class)：</span></a></li></ol></div>
             
           </div>
         </section>

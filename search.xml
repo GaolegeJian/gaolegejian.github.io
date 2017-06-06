@@ -4,6 +4,134 @@
   
     
     <entry>
+      <title><![CDATA[Java异常机制(Exception)]]></title>
+      <url>http://yoursite.com/2017/06/05/Java%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6-Exception/</url>
+      <content type="html"><![CDATA[<p>软件程序在运行过程中，非常可能遇到异常问题，我们叫异常，英文是：Exception，意思是例外。这些例外情况，或者叫异常，怎么让我们写的程序做出合理的处理，而不至于程序崩溃。<br>常见的异常：</p>
+<ul>
+<li>用户输入错误</li>
+<li>设备错误</li>
+<li>硬件问题，比如打印机关掉、服务器问题</li>
+<li>磁盘满了</li>
+<li>……等等<h3 id="异常（Exception）的概念"><a href="#异常（Exception）的概念" class="headerlink" title="异常（Exception）的概念"></a>异常（Exception）的概念</h3>Java异常是Java提供的用于处理程序中错误的一种机制。<br>  public static void main(String[] args) {<pre><code>int i = 1/0;
+</code></pre>  }<br>  Exception in thread “main” java.lang.ArithmeticException: / by zero<pre><code>at fileclass.TestFile.main(TestFile.java:36)
+</code></pre><strong>Java是采用面向对象的方式来处理异常的，处理过程：</strong></li>
+<li><strong>抛出异常：</strong>在执行一个方法时，如果发生异常，则这个方法生成代表该异常的一个对象，停止当前执行路径，并把异常对象提交给JRE</li>
+<li><strong>捕获异常：</strong>JRE得到该异常后，寻找相应的代码来处理该异常。JRE在方法的调用栈中查找，从生成异常的方法开始回朔，直到找到相应的异常处理代码为止。<h3 id="异常分类"><a href="#异常分类" class="headerlink" title="异常分类"></a>异常分类</h3>JDK中定义了很多异常类，这些类对应了各种各样可能出现的异常事件，所有异常对象都是派生于Throwable类的一个实例。如果内置的异常类不能够满足需要，还可以创建自己的异常类<br><img src="/image/Java%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6/%E5%BC%82%E5%B8%B8%E5%88%86%E7%B1%BB.png" alt=""></li>
+</ul>
+<p><strong>Exception</strong><br>所有异常类的父类，其子类对应了各种各样可能出现的异常事件。<br>Runtime Exception (unchecked Exception)</p>
+<ul>
+<li>一类特殊的异常，例如除以0、数组下标越界等，其产生比较频繁，处理麻烦，如果显示声明或捕获，将会对程序可读性和运行效率影响很大。因此由系统自动检测并将它们交给缺省的异常处理程序（用户可不必对其处理）。<br>Checked Exception</li>
+<li>这一类异常，我们必须捕获进行处理。</li>
+</ul>
+<p><strong>Runtime Exception</strong><br>    // ArithmeticException 如试图除以0<br>        int b = 1;<br>        if (b!=0) {<br>        int c = 1 / b;<br>        } else {<br>        System.out.println(“不能用0做除数”);<br>        }<br>    // NullPointerException 当程序访问一个空对象的成员变量或方法时发生异常，怎么处理？<br>        TestException te = new TestException();<br>        if (te!=null) {<br>        te.test1();<br>        }else {<br>        System.out.println(“空指针异常”);<br>        }<br>    // ArrayIndexOutOfBoundsException<br>        int[] a = {1, 2, 3};<br>        int index = 3;<br>        if (index &lt;= a.length-1) {<br>        System.out.println(a[index]);<br>        }<br>    // ClassCaseException   // 类型转化异常<br>        void test2(Object object) {<br>        if (object instanceof TestException) {<br>        TestException te = (TestException) object;<br>        }<br>        }</p>
+<h3 id="异常的处理方法"><a href="#异常的处理方法" class="headerlink" title="异常的处理方法"></a>异常的处理方法</h3><ol>
+<li>捕获异常(try, catch, finally)<br><img src="/image/Java%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6/tryCatch" alt=""><br><strong>try</strong><br>try语句指定了一段代码，该段代码就是一次捕获并处理的范围。在执行过程中，在任意一条语句产生异常时，就会跳过该段中后面的代码。代码中可能会产生并抛出一种或几种类型的异常对象，它后面的catch语句要分别对这些异常做相应的处理。<br><strong>注：当异常处理的代码执行结束以后，是不会再回到try语句中去执行尚未执行的代码的。</strong><br><strong>catch</strong><br>catch捕获异常时的捕获顺序：</li>
+</ol>
+<ul>
+<li>如果异常类之间有继承关系，在顺序安排上需注意，越是顶层的类，越放在下面。再不然就直接把多余的catch省略掉。<br><strong>finally</strong><br>有些语句，不管是否发生了异常，都必须要执行，那么就可以把这样的语句放到finally语句块中。<br>通常在finally中关闭程序块已打开的资源，比如：文件流、释放数据库连接等。</li>
+</ul>
+<ol>
+<li>声明异常：throws子句<br>方法重写中声明异常原则：<br><strong>子类声明的异常范围不能超过父类声明的范围。</strong></li>
+</ol>
+<ul>
+<li>父类没有声明异常，子类也不能。</li>
+<li>不可抛出原有方法抛出异常类的父类或上层类。</li>
+<li>抛出的异常类型的数目不可以比原有的方法抛出的还多（不是指个数）</li>
+</ul>
+<ol>
+<li>自定义异常<br><strong>使用异常机制建议</strong><br>要避免使用异常处理代替错误处理，这样会降低程序的清晰性，并且效率低下。<br>处理异常不可以代替简单测试— 只在异常情况下使用异常机制<br>不要进行小粒度的异常处理—应该将整个任务包装在一个Try语句块中<br>异常往往在高层处理<br><strong>总结</strong></li>
+<li>一个图</li>
+<li>五个关键字（try, catch, finally, throws, throw）</li>
+<li>先逮小的，再逮大的</li>
+<li>异常与重写的关系</li>
+<li>自定义异常</li>
+</ol>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[自动装箱和拆箱]]></title>
+      <url>http://yoursite.com/2017/06/02/%E8%87%AA%E5%8A%A8%E8%A3%85%E7%AE%B1%E5%92%8C%E6%8B%86%E7%AE%B1/</url>
+      <content type="html"><![CDATA[<p>JDK5.0之后有了自动装箱，通过编译器帮我们改进代码。<br><strong>自动装箱</strong></p>
+<ul>
+<li>基本数据类型就自动地封装到与它相同类型的包装类中，如：</li>
+<li>Integer i = 100;</li>
+<li>本质上是，编译器编译时为我们添加了：</li>
+<li>Integer i = new Integer(100);<br><strong>自动拆箱</strong></li>
+<li>包装类对象自动转换成基本数据类型。 如：</li>
+<li>int a = new Integer(100);</li>
+<li>本质上，编译器编译时为我们添加了：</li>
+<li>int a = new Integer(100).intValue();</li>
+</ul>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java常用类]]></title>
+      <url>http://yoursite.com/2017/06/01/Java%E5%B8%B8%E7%94%A8%E7%B1%BB/</url>
+      <content type="html"><![CDATA[<p>基本数据类型的包装类</p>
+<h3 id="字符串相关类："><a href="#字符串相关类：" class="headerlink" title="字符串相关类："></a>字符串相关类：</h3><ul>
+<li>不可变字符串序列：String</li>
+<li>可变字符串序列：StringBuilder、StringBuffer<h3 id="时间处理相关类："><a href="#时间处理相关类：" class="headerlink" title="时间处理相关类："></a>时间处理相关类：</h3></li>
+<li>Date</li>
+<li>DateFormat、SimpleDateFormat</li>
+<li>Calendar、GregorianCalendar<br><img src="/image/Java%E5%B8%B8%E7%94%A8%E7%B1%BB/%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E7%9B%B8%E5%85%B3%E7%B1%BB.png" alt=""><br><strong>Date时间类(java.util.Date)</strong></li>
+<li>标准Java类库中包含一个Date类，它的对象表示一个特定的瞬间，精确到毫秒。</li>
+<li>Java中时间的表示说白了也是数字，是从：标准纪元1970.1.1 0点到某个时刻的毫秒数，类型是long。<br><strong>DateFormat和SimpleDateFormat(java.text.DateFormat)</strong> </li>
+<li>作用：完成字符串和时间对象的转化！</li>
+<li>Format和parse<br><strong>Calendar和GregorianCalendar(java.util)</strong></li>
+<li>人类对于时间的认识是：某年某月某日这样的日期概念。计算机是long类型的数字，通过Calendar在二者之间搭起桥梁！</li>
+<li>GregorianCalendar是Calendar的一个具体子类，提供了世界上大多数国家/地区使用的标准日历系统。</li>
+<li><strong>注意：</strong><ul>
+<li>月份：一月是0，二月是1，以此类推，12月是11</li>
+<li>星期：周日是1，周一是2，。。。。。周六是7</li>
+</ul>
+</li>
+</ul>
+<h3 id="Math类"><a href="#Math类" class="headerlink" title="Math类"></a>Math类</h3><h3 id="File类"><a href="#File类" class="headerlink" title="File类"></a>File类</h3><p><strong>File类(java.io.File)：</strong></p>
+<ul>
+<li>文件和目标路径名的抽象表示形式</li>
+<li>通过File对象可以访问文件的属性<pre><code>public boolean canRead()        public boolean canWrite()
+    public boolean exists()             public boolean isDirectory()
+    public boolean isFile()              public boolean isHidden()
+    public long lastModified()        public long length()
+    public String getName()           public String getPath()
+</code></pre></li>
+<li>通过File对象创建空文件或目录（在该对象所指的文件或目录不存在的情况下）<pre><code>public boolean createNewFile()throws IOException
+    public boolean delete()
+    public boolean mkdir(),   mkdirs()   // 注意两个的区别！
+</code></pre></li>
+</ul>
+<h3 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h3><h3 id="包装类-Wrapper-Class-："><a href="#包装类-Wrapper-Class-：" class="headerlink" title="包装类(Wrapper Class)："></a>包装类(Wrapper Class)：</h3><p>将基本数据类型转化为对象</p>
+<ul>
+<li>byte -> Byte</li>
+<li>boolean -> Boolean</li>
+<li>short -> Short</li>
+<li>char -> Character</li>
+<li>int -> Integer</li>
+<li>long -> Long</li>
+<li>float -> Float</li>
+<li>double -> Double<br><strong>自动装箱</strong></li>
+<li>基本数据类型就自动地封装到与它相同类型的包装类中，如：</li>
+<li>Integer i = 100;</li>
+<li>本质上是，编译器编译时为我们添加了：</li>
+<li>Integer i = new Integer(100);<br><strong>自动拆箱</strong></li>
+<li>包装类对象自动转换成基本数据类型。 如：</li>
+<li>int a = new Integer(100);</li>
+<li>本质上，编译器编译时为我们添加了：</li>
+<li>int a = new Integer(100).intValue();<br>JDK5.0之后有了自动装箱，通过编译器帮我们改进代码。</li>
+</ul>
+<p>你今后人生的艰难，恰恰不是因为你没能考上一个满意的学校，而是在这所学校里，在一个能让自己自由充分成长的黄金四年里，把自己给荒废了。 </p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[String类]]></title>
       <url>http://yoursite.com/2017/05/28/String%E7%B1%BB/</url>
       <content type="html"><![CDATA[<h3 id="字符串的使用"><a href="#字符串的使用" class="headerlink" title="字符串的使用"></a>字符串的使用</h3><p>Java字符串就是<strong>Unicode</strong>字符序列，例如字符串 “Java” 就是4个Unicode字符J,a,v,a组成的。<br>Java没有内置的字符串类型，而是在标准Java类库中提供了一个预定义的类String，每个用双引号括起来的字符串都是String类的一个实例。</p>
@@ -607,18 +735,18 @@
     </entry>
     
     <entry>
-      <title></title>
-      <url>http://yoursite.com/Untitled.qvnotebook/meta.json</url>
-      <content type="html"><![CDATA[{"name":"Untitled","uuid":"BECA0A01-DC5D-46A5-B1B4-9C647436B360"}]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[about]]></title>
       <url>http://yoursite.com/about/index.html</url>
       <content type="html"><![CDATA[<h1 id="欢迎来到高健的技术小站"><a href="#欢迎来到高健的技术小站" class="headerlink" title="欢迎来到高健的技术小站"></a>欢迎来到高健的技术小站</h1><h3 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h3><p> Java开发者，偶尔写写Javascript。</p>
 <h3 id="建立博客的目的"><a href="#建立博客的目的" class="headerlink" title="建立博客的目的"></a>建立博客的目的</h3><p>提高自己的表达能力<br>对学到的知识进行总结管理</p>
 <h3 id="最后给您送上我最喜欢的一句箴言"><a href="#最后给您送上我最喜欢的一句箴言" class="headerlink" title="最后给您送上我最喜欢的一句箴言"></a>最后给您送上我最喜欢的一句箴言</h3><p>怕什么真理无穷，进一寸有一寸的欢喜。</p>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title></title>
+      <url>http://yoursite.com/Untitled.qvnotebook/meta.json</url>
+      <content type="html"><![CDATA[{"name":"Untitled","uuid":"BECA0A01-DC5D-46A5-B1B4-9C647436B360"}]]></content>
     </entry>
     
     <entry>

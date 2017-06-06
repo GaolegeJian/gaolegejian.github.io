@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="面向对象," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -86,17 +86,19 @@
 
 
 
-<meta name="description" content="Object类Object类是所有Java类的根基类。如果在类的声明中未使用extends关键字指明基类，则默认基类为Object类重写：toString方法：  默认返回：包名+类名+@+哈希码（根据对象内存位置生成，唯一不重复）super关键字super是直接父类对象的引用。可以通过super来访问父类中被子类覆盖（重写）的方法或属性。普通方法： 没有顺序限制。可以随便调用构造函数中： 任何类">
-<meta name="keywords" content="面向对象">
+<meta name="description" content="软件程序在运行过程中，非常可能遇到异常问题，我们叫异常，英文是：Exception，意思是例外。这些例外情况，或者叫异常，怎么让我们写的程序做出合理的处理，而不至于程序崩溃。常见的异常：  用户输入错误 设备错误 硬件问题，比如打印机关掉、服务器问题 磁盘满了 ……等等异常（Exception）的概念Java异常是Java提供的用于处理程序中错误的一种机制。  public static void">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Object类和super关键字">
-<meta property="og:url" content="http://yoursite.com/2017/05/23/Object类和super关键字/index.html">
+<meta property="og:title" content="Java异常机制(Exception)">
+<meta property="og:url" content="http://yoursite.com/2017/06/05/Java异常机制-Exception/index.html">
 <meta property="og:site_name" content="GaoJian&#39;s blog">
-<meta property="og:description" content="Object类Object类是所有Java类的根基类。如果在类的声明中未使用extends关键字指明基类，则默认基类为Object类重写：toString方法：  默认返回：包名+类名+@+哈希码（根据对象内存位置生成，唯一不重复）super关键字super是直接父类对象的引用。可以通过super来访问父类中被子类覆盖（重写）的方法或属性。普通方法： 没有顺序限制。可以随便调用构造函数中： 任何类">
-<meta property="og:updated_time" content="2017-05-31T04:07:41.000Z">
+<meta property="og:description" content="软件程序在运行过程中，非常可能遇到异常问题，我们叫异常，英文是：Exception，意思是例外。这些例外情况，或者叫异常，怎么让我们写的程序做出合理的处理，而不至于程序崩溃。常见的异常：  用户输入错误 设备错误 硬件问题，比如打印机关掉、服务器问题 磁盘满了 ……等等异常（Exception）的概念Java异常是Java提供的用于处理程序中错误的一种机制。  public static void">
+<meta property="og:image" content="http://yoursite.com/image/Java%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6/%E5%BC%82%E5%B8%B8%E5%88%86%E7%B1%BB.png">
+<meta property="og:image" content="http://yoursite.com/image/Java%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6/tryCatch">
+<meta property="og:updated_time" content="2017-06-05T13:56:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Object类和super关键字">
-<meta name="twitter:description" content="Object类Object类是所有Java类的根基类。如果在类的声明中未使用extends关键字指明基类，则默认基类为Object类重写：toString方法：  默认返回：包名+类名+@+哈希码（根据对象内存位置生成，唯一不重复）super关键字super是直接父类对象的引用。可以通过super来访问父类中被子类覆盖（重写）的方法或属性。普通方法： 没有顺序限制。可以随便调用构造函数中： 任何类">
+<meta name="twitter:title" content="Java异常机制(Exception)">
+<meta name="twitter:description" content="软件程序在运行过程中，非常可能遇到异常问题，我们叫异常，英文是：Exception，意思是例外。这些例外情况，或者叫异常，怎么让我们写的程序做出合理的处理，而不至于程序崩溃。常见的异常：  用户输入错误 设备错误 硬件问题，比如打印机关掉、服务器问题 磁盘满了 ……等等异常（Exception）的概念Java异常是Java提供的用于处理程序中错误的一种机制。  public static void">
+<meta name="twitter:image" content="http://yoursite.com/image/Java%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6/%E5%BC%82%E5%B8%B8%E5%88%86%E7%B1%BB.png">
 
 
 
@@ -114,7 +116,7 @@
   };
 </script>
 
-  <title> Object类和super关键字 | GaoJian's blog </title>
+  <title> Java异常机制(Exception) | GaoJian's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -287,7 +289,7 @@
             
             
               
-                Object类和super关键字
+                Java异常机制(Exception)
               
             
           </h1>
@@ -299,38 +301,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-05-23T17:20:10+08:00" content="2017-05-23">
-              2017-05-23
+            <time itemprop="dateCreated" datetime="2017-06-05T16:04:18+08:00" content="2017-06-05">
+              2017-06-05
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Java学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">Java学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/05/23/Object类和super关键字/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/23/Object类和super关键字/" itemprop="commentsCount"></span>
+                <a href="/2017/06/05/Java异常机制-Exception/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/05/Java异常机制-Exception/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -358,12 +341,46 @@
       
 
       
-        <h4 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h4><p>Object类是所有Java类的根基类。<br>如果在类的声明中未使用extends关键字指明基类，则默认基类为Object类<br>重写：toString方法：</p>
+        <p>软件程序在运行过程中，非常可能遇到异常问题，我们叫异常，英文是：Exception，意思是例外。这些例外情况，或者叫异常，怎么让我们写的程序做出合理的处理，而不至于程序崩溃。<br>常见的异常：</p>
 <ul>
-<li>默认返回：包名+类名+@+哈希码（根据对象内存位置生成，唯一不重复）<h4 id="super关键字"><a href="#super关键字" class="headerlink" title="super关键字"></a>super关键字</h4>super是直接父类对象的引用。可以通过super来访问父类中被子类覆盖（重写）的方法或属性。<br>普通方法：</li>
-<li>没有顺序限制。可以随便调用<br>构造函数中：</li>
-<li>任何类的构造函数中，若是构造函数的第一行代码没有显式的调用super(…); 那么Java默认都会调用super(); 作为父类的初始化函数。所以你这里的super();加不加都无所谓。</li>
+<li>用户输入错误</li>
+<li>设备错误</li>
+<li>硬件问题，比如打印机关掉、服务器问题</li>
+<li>磁盘满了</li>
+<li>……等等<h3 id="异常（Exception）的概念"><a href="#异常（Exception）的概念" class="headerlink" title="异常（Exception）的概念"></a>异常（Exception）的概念</h3>Java异常是Java提供的用于处理程序中错误的一种机制。<br>  public static void main(String[] args) {<pre><code>int i = 1/0;
+</code></pre>  }<br>  Exception in thread “main” java.lang.ArithmeticException: / by zero<pre><code>at fileclass.TestFile.main(TestFile.java:36)
+</code></pre><strong>Java是采用面向对象的方式来处理异常的，处理过程：</strong></li>
+<li><strong>抛出异常：</strong>在执行一个方法时，如果发生异常，则这个方法生成代表该异常的一个对象，停止当前执行路径，并把异常对象提交给JRE</li>
+<li><strong>捕获异常：</strong>JRE得到该异常后，寻找相应的代码来处理该异常。JRE在方法的调用栈中查找，从生成异常的方法开始回朔，直到找到相应的异常处理代码为止。<h3 id="异常分类"><a href="#异常分类" class="headerlink" title="异常分类"></a>异常分类</h3>JDK中定义了很多异常类，这些类对应了各种各样可能出现的异常事件，所有异常对象都是派生于Throwable类的一个实例。如果内置的异常类不能够满足需要，还可以创建自己的异常类<br><img src="/image/Java%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6/%E5%BC%82%E5%B8%B8%E5%88%86%E7%B1%BB.png" alt=""></li>
 </ul>
+<p><strong>Exception</strong><br>所有异常类的父类，其子类对应了各种各样可能出现的异常事件。<br>Runtime Exception (unchecked Exception)</p>
+<ul>
+<li>一类特殊的异常，例如除以0、数组下标越界等，其产生比较频繁，处理麻烦，如果显示声明或捕获，将会对程序可读性和运行效率影响很大。因此由系统自动检测并将它们交给缺省的异常处理程序（用户可不必对其处理）。<br>Checked Exception</li>
+<li>这一类异常，我们必须捕获进行处理。</li>
+</ul>
+<p><strong>Runtime Exception</strong><br>    // ArithmeticException 如试图除以0<br>        int b = 1;<br>        if (b!=0) {<br>        int c = 1 / b;<br>        } else {<br>        System.out.println(“不能用0做除数”);<br>        }<br>    // NullPointerException 当程序访问一个空对象的成员变量或方法时发生异常，怎么处理？<br>        TestException te = new TestException();<br>        if (te!=null) {<br>        te.test1();<br>        }else {<br>        System.out.println(“空指针异常”);<br>        }<br>    // ArrayIndexOutOfBoundsException<br>        int[] a = {1, 2, 3};<br>        int index = 3;<br>        if (index &lt;= a.length-1) {<br>        System.out.println(a[index]);<br>        }<br>    // ClassCaseException   // 类型转化异常<br>        void test2(Object object) {<br>        if (object instanceof TestException) {<br>        TestException te = (TestException) object;<br>        }<br>        }</p>
+<h3 id="异常的处理方法"><a href="#异常的处理方法" class="headerlink" title="异常的处理方法"></a>异常的处理方法</h3><ol>
+<li>捕获异常(try, catch, finally)<br><img src="/image/Java%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6/tryCatch" alt=""><br><strong>try</strong><br>try语句指定了一段代码，该段代码就是一次捕获并处理的范围。在执行过程中，在任意一条语句产生异常时，就会跳过该段中后面的代码。代码中可能会产生并抛出一种或几种类型的异常对象，它后面的catch语句要分别对这些异常做相应的处理。<br><strong>注：当异常处理的代码执行结束以后，是不会再回到try语句中去执行尚未执行的代码的。</strong><br><strong>catch</strong><br>catch捕获异常时的捕获顺序：</li>
+</ol>
+<ul>
+<li>如果异常类之间有继承关系，在顺序安排上需注意，越是顶层的类，越放在下面。再不然就直接把多余的catch省略掉。<br><strong>finally</strong><br>有些语句，不管是否发生了异常，都必须要执行，那么就可以把这样的语句放到finally语句块中。<br>通常在finally中关闭程序块已打开的资源，比如：文件流、释放数据库连接等。</li>
+</ul>
+<ol>
+<li>声明异常：throws子句<br>方法重写中声明异常原则：<br><strong>子类声明的异常范围不能超过父类声明的范围。</strong></li>
+</ol>
+<ul>
+<li>父类没有声明异常，子类也不能。</li>
+<li>不可抛出原有方法抛出异常类的父类或上层类。</li>
+<li>抛出的异常类型的数目不可以比原有的方法抛出的还多（不是指个数）</li>
+</ul>
+<ol>
+<li>自定义异常<br><strong>使用异常机制建议</strong><br>要避免使用异常处理代替错误处理，这样会降低程序的清晰性，并且效率低下。<br>处理异常不可以代替简单测试— 只在异常情况下使用异常机制<br>不要进行小粒度的异常处理—应该将整个任务包装在一个Try语句块中<br>异常往往在高层处理<br><strong>总结</strong></li>
+<li>一个图</li>
+<li>五个关键字（try, catch, finally, throws, throw）</li>
+<li>先逮小的，再逮大的</li>
+<li>异常与重写的关系</li>
+<li>自定义异常</li>
+</ol>
 
       
     </div>
@@ -399,28 +416,18 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/面向对象/" rel="tag">#面向对象</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/22/继承/" rel="next" title="继承">
-                <i class="fa fa-chevron-left"></i> 继承
+              <a href="/2017/06/02/自动装箱和拆箱/" rel="next" title="自动装箱和拆箱">
+                <i class="fa fa-chevron-left"></i> 自动装箱和拆箱
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/25/final关键字/" rel="prev" title="final关键字">
-                final关键字 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -446,8 +453,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/05/23/Object类和super关键字/"
-           data-title="Object类和super关键字" data-url="http://yoursite.com/2017/05/23/Object类和super关键字/">
+      <div class="ds-thread" data-thread-key="2017/06/05/Java异常机制-Exception/"
+           data-title="Java异常机制(Exception)" data-url="http://yoursite.com/2017/06/05/Java异常机制-Exception/">
       </div>
     
   </div>
@@ -579,7 +586,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Object类"><span class="nav-number">1.</span> <span class="nav-text">Object类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#super关键字"><span class="nav-number">2.</span> <span class="nav-text">super关键字</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#异常（Exception）的概念"><span class="nav-number">1.</span> <span class="nav-text">异常（Exception）的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常分类"><span class="nav-number">2.</span> <span class="nav-text">异常分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常的处理方法"><span class="nav-number">3.</span> <span class="nav-text">异常的处理方法</span></a></li></ol></div>
             
           </div>
         </section>
