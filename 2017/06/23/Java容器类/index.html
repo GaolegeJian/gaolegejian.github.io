@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="面向对象," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -86,17 +86,18 @@
 
 
 
-<meta name="description" content="Object类Object类是所有Java类的根基类。如果在类的声明中未使用extends关键字指明基类，则默认基类为Object类重写：toString方法：  默认返回：包名+类名+@+哈希码（根据对象内存位置生成，唯一不重复）super关键字super是直接父类对象的引用。可以通过super来访问父类中被子类覆盖（重写）的方法或属性。普通方法： 没有顺序限制。可以随便调用构造函数中： 任何类">
-<meta name="keywords" content="面向对象">
+<meta name="description" content="Collection的概念Collection表示一组对象，它是集中，收集的意思，就是把一些数据收集起来Collection函数库是在java.util包下的一些接口和类，类是用来产生对象存放数据用的，而接口是访问数据的方式。Collection函数库与数值的两点不同：  数组的容量是有限制的，而Collection库没有这样的限制，它容量可以自动的调节。 Collection函数库只能用来存放对">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Object类和super关键字">
-<meta property="og:url" content="http://yoursite.com/2017/05/23/Object类和super关键字/index.html">
+<meta property="og:title" content="Java容器类">
+<meta property="og:url" content="http://yoursite.com/2017/06/23/Java容器类/index.html">
 <meta property="og:site_name" content="GaoJian&#39;s blog">
-<meta property="og:description" content="Object类Object类是所有Java类的根基类。如果在类的声明中未使用extends关键字指明基类，则默认基类为Object类重写：toString方法：  默认返回：包名+类名+@+哈希码（根据对象内存位置生成，唯一不重复）super关键字super是直接父类对象的引用。可以通过super来访问父类中被子类覆盖（重写）的方法或属性。普通方法： 没有顺序限制。可以随便调用构造函数中： 任何类">
-<meta property="og:updated_time" content="2017-05-31T04:07:41.000Z">
+<meta property="og:description" content="Collection的概念Collection表示一组对象，它是集中，收集的意思，就是把一些数据收集起来Collection函数库是在java.util包下的一些接口和类，类是用来产生对象存放数据用的，而接口是访问数据的方式。Collection函数库与数值的两点不同：  数组的容量是有限制的，而Collection库没有这样的限制，它容量可以自动的调节。 Collection函数库只能用来存放对">
+<meta property="og:image" content="http://yoursite.com/image/Java%E5%AE%B9%E5%99%A8%E7%B1%BB/%E5%AE%B9%E5%99%A8%E6%8E%A5%E5%8F%A3.png">
+<meta property="og:updated_time" content="2017-06-23T12:45:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Object类和super关键字">
-<meta name="twitter:description" content="Object类Object类是所有Java类的根基类。如果在类的声明中未使用extends关键字指明基类，则默认基类为Object类重写：toString方法：  默认返回：包名+类名+@+哈希码（根据对象内存位置生成，唯一不重复）super关键字super是直接父类对象的引用。可以通过super来访问父类中被子类覆盖（重写）的方法或属性。普通方法： 没有顺序限制。可以随便调用构造函数中： 任何类">
+<meta name="twitter:title" content="Java容器类">
+<meta name="twitter:description" content="Collection的概念Collection表示一组对象，它是集中，收集的意思，就是把一些数据收集起来Collection函数库是在java.util包下的一些接口和类，类是用来产生对象存放数据用的，而接口是访问数据的方式。Collection函数库与数值的两点不同：  数组的容量是有限制的，而Collection库没有这样的限制，它容量可以自动的调节。 Collection函数库只能用来存放对">
+<meta name="twitter:image" content="http://yoursite.com/image/Java%E5%AE%B9%E5%99%A8%E7%B1%BB/%E5%AE%B9%E5%99%A8%E6%8E%A5%E5%8F%A3.png">
 
 
 
@@ -114,7 +115,7 @@
   };
 </script>
 
-  <title> Object类和super关键字 | GaoJian's blog </title>
+  <title> Java容器类 | GaoJian's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -287,7 +288,7 @@
             
             
               
-                Object类和super关键字
+                Java容器类
               
             
           </h1>
@@ -299,38 +300,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-05-23T17:20:10+08:00" content="2017-05-23">
-              2017-05-23
+            <time itemprop="dateCreated" datetime="2017-06-23T17:12:27+08:00" content="2017-06-23">
+              2017-06-23
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Java学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">Java学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/05/23/Object类和super关键字/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/23/Object类和super关键字/" itemprop="commentsCount"></span>
+                <a href="/2017/06/23/Java容器类/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/23/Java容器类/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -358,11 +340,15 @@
       
 
       
-        <h4 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h4><p>Object类是所有Java类的根基类。<br>如果在类的声明中未使用extends关键字指明基类，则默认基类为Object类<br>重写：toString方法：</p>
+        <h3 id="Collection的概念"><a href="#Collection的概念" class="headerlink" title="Collection的概念"></a>Collection的概念</h3><p>Collection表示一组对象，它是集中，收集的意思，就是把一些数据收集起来<br>Collection函数库是在java.util包下的一些接口和类，类是用来产生对象存放数据用的，而接口是访问数据的方式。<br>Collection函数库与数值的两点不同：</p>
+<ol>
+<li>数组的容量是有限制的，而Collection库没有这样的限制，它容量可以自动的调节。</li>
+<li>Collection函数库只能用来存放对象，而数组没有这样的限制。<br>Collection接口是Collection层次结构中的根接口，它定义了一些最基本的访问方法，让我们能用统一的方式通过它或它的子接口来访问数据。<br>区别：Collection代表一组对象，Collection函数库就是Java中的集合框架，Collection接口，是这个集合框架中的根接口。<br>存放在Collection库中的数据，被称为元素(element)。</li>
+</ol>
+<h3 id="API接口"><a href="#API接口" class="headerlink" title="API接口"></a>API接口</h3><p><img src="/image/Java%E5%AE%B9%E5%99%A8%E7%B1%BB/%E5%AE%B9%E5%99%A8%E6%8E%A5%E5%8F%A3.png" alt=""><br>Collection接口：定义了存取一组对象的方法，其子接口Set和List分别定义了存储方式。</p>
 <ul>
-<li>默认返回：包名+类名+@+哈希码（根据对象内存位置生成，唯一不重复）<h4 id="super关键字"><a href="#super关键字" class="headerlink" title="super关键字"></a>super关键字</h4>super是直接父类对象的引用。可以通过super来访问父类中被子类覆盖（重写）的方法或属性。<br>普通方法：</li>
-<li>没有顺序限制。可以随便调用<br>构造函数中：</li>
-<li>任何类的构造函数中，若是构造函数的第一行代码没有显式的调用super(…); 那么Java默认都会调用super(); 作为父类的初始化函数。所以你这里的super();加不加都无所谓。</li>
+<li>Set中的数据对象没有顺序且不可以重复。</li>
+<li>List中的数据对象有顺序且可以重复。<br>Map接口定义了存储 “键(key) — 值(value) 映射对“ 的方法。</li>
 </ul>
 
       
@@ -399,28 +385,18 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/面向对象/" rel="tag">#面向对象</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/22/继承/" rel="next" title="继承">
-                <i class="fa fa-chevron-left"></i> 继承
+              <a href="/2017/06/05/Java异常机制-Exception/" rel="next" title="Java异常机制(Exception)">
+                <i class="fa fa-chevron-left"></i> Java异常机制(Exception)
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/25/final关键字/" rel="prev" title="final关键字">
-                final关键字 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -446,8 +422,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/05/23/Object类和super关键字/"
-           data-title="Object类和super关键字" data-url="http://yoursite.com/2017/05/23/Object类和super关键字/">
+      <div class="ds-thread" data-thread-key="2017/06/23/Java容器类/"
+           data-title="Java容器类" data-url="http://yoursite.com/2017/06/23/Java容器类/">
       </div>
     
   </div>
@@ -579,7 +555,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Object类"><span class="nav-number">1.</span> <span class="nav-text">Object类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#super关键字"><span class="nav-number">2.</span> <span class="nav-text">super关键字</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Collection的概念"><span class="nav-number">1.</span> <span class="nav-text">Collection的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#API接口"><span class="nav-number">2.</span> <span class="nav-text">API接口</span></a></li></ol></div>
             
           </div>
         </section>

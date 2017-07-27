@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-05T13:56:39.000Z</updated>
+  <updated>2017-06-23T12:45:54.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java容器类</title>
+    <link href="http://yoursite.com/2017/06/23/Java%E5%AE%B9%E5%99%A8%E7%B1%BB/"/>
+    <id>http://yoursite.com/2017/06/23/Java容器类/</id>
+    <published>2017-06-23T09:12:27.000Z</published>
+    <updated>2017-06-23T12:45:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Collection的概念"><a href="#Collection的概念" class="headerlink" title="Collection的概念"></a>Collection的概念</h3><p>Collection表示一组对象，它是集中，收集的意思，就是把一些数据收集起来<br>Collection函数库是在java.util包下的一些接口和类，类是用来产生对象存放数据用的，而接口是访问数据的方式。<br>Collection函数库与数值的两点不同：</p>
+<ol>
+<li>数组的容量是有限制的，而Collection库没有这样的限制，它容量可以自动的调节。</li>
+<li>Collection函数库只能用来存放对象，而数组没有这样的限制。<br>Collection接口是Collection层次结构中的根接口，它定义了一些最基本的访问方法，让我们能用统一的方式通过它或它的子接口来访问数据。<br>区别：Collection代表一组对象，Collection函数库就是Java中的集合框架，Collection接口，是这个集合框架中的根接口。<br>存放在Collection库中的数据，被称为元素(element)。</li>
+</ol>
+<h3 id="API接口"><a href="#API接口" class="headerlink" title="API接口"></a>API接口</h3><p><img src="/image/Java%E5%AE%B9%E5%99%A8%E7%B1%BB/%E5%AE%B9%E5%99%A8%E6%8E%A5%E5%8F%A3.png" alt=""><br>Collection接口：定义了存取一组对象的方法，其子接口Set和List分别定义了存储方式。</p>
+<ul>
+<li>Set中的数据对象没有顺序且不可以重复。</li>
+<li>List中的数据对象有顺序且可以重复。<br>Map接口定义了存储 “键(key) — 值(value) 映射对“ 的方法。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Collection的概念&quot;&gt;&lt;a href=&quot;#Collection的概念&quot; class=&quot;headerlink&quot; title=&quot;Collection的概念&quot;&gt;&lt;/a&gt;Collection的概念&lt;/h3&gt;&lt;p&gt;Collection表示一组对象，它是集中，收集的意
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Java异常机制(Exception)</title>
@@ -804,31 +832,6 @@
     
     
       <category term="IPO" scheme="http://yoursite.com/tags/IPO/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>搭建Hexo博客</title>
-    <link href="http://yoursite.com/2016/10/08/%E6%90%AD%E5%BB%BAHexo/"/>
-    <id>http://yoursite.com/2016/10/08/搭建Hexo/</id>
-    <published>2016-10-08T03:44:56.000Z</published>
-    <updated>2016-10-09T02:29:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>搭建博客教程:</strong> <a href="http://www.ac4fun.com/" title="http://www.ac4fun.com" target="_blank" rel="external">http://www.ac4fun.com</a><br><strong>常用命令:</strong><br>    hexo clean    : 清除public文件夹，重新部署之前的步骤<br>    hexo generate : 修改配置或者提交新文章后都需要重新部署，主要是声明public文件夹里面的内容<br>    hexo deploy   : 将更新后的的博客上传至你的github空间</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;搭建博客教程:&lt;/strong&gt; &lt;a href=&quot;http://www.ac4fun.com/&quot; title=&quot;http://www.ac4fun.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.ac4fun.
-    
-    </summary>
-    
-      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
-    
-      <category term="Node.js" scheme="http://yoursite.com/categories/Hexo/Node-js/"/>
-    
-    
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
   </entry>
   
